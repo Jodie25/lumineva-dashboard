@@ -1,0 +1,2929 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tests · Lumineva</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Roboto+Condensed:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="promo"><div class="wrap"><span>Smart Data Marketing · M2 IAE</span><span>·</span><span>Projet réalisé pour Lumineva</span></div></div>
+<header class="hero hero-sm"><div class="wrap"><div class="hero-top"><a href="index.html"><img src="assets/logo.png" alt="Lumineva, retour à l'accueil" width="540" height="160"></a><div class="who">Dashboard de restitution<br>Page 6 sur 7</div></div><h1>Tests</h1><p class="sub">Les tests réalisés, repris tels qu'ils sont rédigés, avec leurs résultats et leur significativité.</p></div></header>
+<nav class="nav" aria-label="Pages du dashboard"><div class="wrap"><ul><li><a href="index.html"><i>1</i>Démarche</a></li><li><a href="etapes.html"><i>2</i>Étapes</a></li><li><a href="donnees.html"><i>3</i>Données</a></li><li><a href="methodologie.html"><i>4</i>Méthodologie</a></li><li><a href="hypotheses.html"><i>5</i>Hypothèses</a></li><li><a href="tests.html" class="on" aria-current="page"><i>6</i>Tests</a></li><li><a href="recommandations.html"><i>7</i>Recommandations</a></li></ul></div></nav>
+<main>
+<section id="lecture"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Comment lire un test</span>
+    <h2>Chaque test suit le même template</h2>
+    <p class="lead">Les tests ci-dessous sont repris tels qu'ils sont rédigés dans le document « Test réalisé » (dossier 4. Test), avec leurs tableaux et leurs graphiques.</p>
+  </div>
+  <div class="grid3">
+    <div class="card"><span class="label">La règle de décision</span><p>H0 : le critère ne change rien. H1 : il change quelque chose. <strong>Si p &lt; 0,05</strong>, l'écart est trop grand pour venir du hasard : on rejette H0 et on retient H1.</p></div>
+    <div class="card"><span class="label">La valeur de p</span><p>C'est la probabilité d'observer un écart au moins aussi grand si le critère ne changeait rien. Exemple (H5) : p = 0,744 veut dire qu'on obtiendrait un tel écart par pur hasard dans environ 74 cas sur 100.</p></div>
+    <div class="card"><span class="label">La viralité</span><p>Vues d'un réel ÷ médiane des 30 réels publiés autour. 1,00 = un réel normal ; 2,00 = deux fois plus de vues que d'habitude.</p></div>
+  </div>
+</div></section>
+
+<section id="resultats"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Les tests réalisés</span>
+    <h2>Résultats, test par test</h2>
+  </div>
+<!-- TESTS:DEBUT -->
+<p class="lead" id="t-nb">19 tests rédigés à ce jour, un par hypothèse (H = hypothèse).</p><div class="tbl"><table><thead><tr><th>Hypothèse</th><th>Question marketing</th><th>Verdict</th></tr></thead><tbody><tr><td><a href="#test-H1"><b>H1</b></a></td><td>Écrire l&#x27;adresse du site ou un lien dans la légende freine-t-il la diffusion de la vidéo ?</td><td><span class="pill ok">Significatif</span></td></tr><tr><td><a href="#test-H2"><b>H2</b></a></td><td>Sous-titrer ses vidéos parlées aide-t-il à toucher plus de monde, qu&#x27;elle parle face caméra ou en voix off ?</td><td><span class="pill ok">Significatif</span></td></tr><tr><td><a href="#test-H3"><b>H3</b></a></td><td>Voir sa famille à l&#x27;image attire-t-il plus que lorsqu&#x27;elle est seule ?</td><td><span class="pill no">Non significatif</span></td></tr><tr><td><a href="#test-H4"><b>H4</b></a></td><td>Demander de commenter, de partager ou de s&#x27;abonner à l&#x27;oral, dans une vidéo sous-titrée, fait-il réagir davantage le public ?</td><td><span class="pill no">Non significatif</span></td></tr><tr><td><a href="#test-H5"><b>H5</b></a></td><td>Demander de commenter, de partager ou de s&#x27;abonner dans la légende fait-il réagir davantage le public ?</td><td><span class="pill ok">Significatif</span></td></tr><tr><td><a href="#test-H6"><b>H6</b></a></td><td>Faut-il faire des reels plus longs pour avoir plus de vues ?</td><td><span class="pill no">Non significatif</span></td></tr><tr><td><a href="#test-H7"><b>H7</b></a></td><td>Un reel qui fait beaucoup réagir amène-t-il plus de ventes dans la semaine qui suit ?</td><td><span class="pill no">Non significatif</span></td></tr><tr><td><a href="#test-H8"><b>H8</b></a></td><td>Un reel où Jessica montre son visage obtient-il plus de vues ?</td><td><span class="pill warn">Significatif, sens inverse</span></td></tr><tr><td><a href="#test-H9"><b>H9</b></a></td><td>Un reel où Jessica montre son visage fait-il plus réagir ?</td><td><span class="pill no">Non significatif</span></td></tr><tr><td><a href="#test-H10"><b>H10</b></a></td><td>Faut-il chercher à faire des réels viraux pour gagner des abonnés ?</td><td><span class="pill ok">Significatif</span></td></tr><tr><td><a href="#test-H11"><b>H11</b></a></td><td>Les réels viraux engagent-ils plus leur audience ?</td><td><span class="pill warn">Significatif, sens inverse</span></td></tr><tr><td><a href="#test-H12"><b>H12</b></a></td><td>Est-ce que certains thèmes abordés dans les réels améliorent les performances du réel ?</td><td><span class="pill warn">Selon le thème</span></td></tr><tr><td><a href="#test-H13"><b>H13</b></a></td><td>Faut-il mettre une musique de fond sur ses réels ?</td><td><span class="pill ok">Significatif</span></td></tr><tr><td><a href="#test-H14"><b>H14</b></a></td><td>Faut-il afficher un texte à l&#x27;écran dès l&#x27;accroche de chaque réel ?</td><td><span class="pill ok">Significatif</span></td></tr><tr><td><a href="#test-H15"><b>H15</b></a></td><td>Fréquence de publication : Faut-il publier plus de réels pour gagner plus de vues, d&#x27;abonnés et d&#x27;engagement ?</td><td><span class="pill warn">Significatif en partie</span></td></tr><tr><td><a href="#test-H16"><b>H16</b></a></td><td>À quelle heure publier ses réels ?</td><td><span class="pill ok">Significatif</span></td></tr><tr><td><a href="#test-H17"><b>H17</b></a></td><td>Code promo annoncé dans un réel fait-il vendre ?</td><td><span class="pill warn">Significatif en partie</span></td></tr><tr><td><a href="#test-H18"><b>H18</b></a></td><td>Dire ou montrer un parfum fait-il vendre ce parfum ?</td><td><span class="pill warn">Significatif en partie</span></td></tr><tr><td><a href="#test-H19"><b>H19</b></a></td><td>Un réel très viral amène-t-il des ventes ?</td><td><span class="pill no">Non significatif</span></td></tr></tbody></table></div><div class="filters t-tools"><button type="button" id="t-open">Tout déplier</button><button type="button" id="t-close">Tout replier</button></div><div class="tests tests-jade"><div class="jsec jsec-1"><h3>Partie 1 — Comment faire un réel performant ?</h3><p>Un réel performant touche beaucoup de comptes (vues, viralité) et transforme cette audience en abonnés et en engagement. Les tests sont rangés selon l'étape de fabrication du réel : construction en amont, tournage, montage, diffusion.</p></div><div class="jsec jsec-2"><h4>Les différents types de performance : les KPI étudiés</h4><div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Type de performance</th>
+<th style="text-align: left;">KPI étudié</th>
+<th style="text-align: left;">Définition et calcul</th>
+<th style="text-align: left;">Colonne du fichier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Visibilité</strong></td>
+<td style="text-align: left;">Vues</td>
+<td style="text-align: left;">Nombre de lectures du réel</td>
+<td style="text-align: left;">Vues</td>
+</tr>
+<tr>
+<td style="text-align: left;">Visibilité</td>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">Nombre de comptes différents touchés</td>
+<td style="text-align: left;">Portée (comptes touchés)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Visibilité</td>
+<td style="text-align: left;">Indice de viralité</td>
+<td style="text-align: left;">Vues du réel ÷ médiane des vues des 31 réels publiés autour de lui. Viral si ≥ 2, très viral si ≥ 5</td>
+<td style="text-align: left;">Calculé à partir de Vues et Date de publication</td>
+</tr>
+<tr>
+<td style="text-align: left;">Visibilité</td>
+<td style="text-align: left;">Part de réels viraux</td>
+<td style="text-align: left;">Part des réels d'un groupe dont l'indice de viralité est ≥ 2</td>
+<td style="text-align: left;">Calculée</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Recrutement</strong></td>
+<td style="text-align: left;">Abonnés gagnés</td>
+<td style="text-align: left;">Nombre de comptes qui se sont abonnés depuis le réel</td>
+<td style="text-align: left;">Abonnés gagnés</td>
+</tr>
+<tr>
+<td style="text-align: left;">Recrutement</td>
+<td style="text-align: left;">Taux d'abonnement</td>
+<td style="text-align: left;">Abonnés gagnés ÷ portée × 1 000 : abonnés pour 1 000 comptes touchés</td>
+<td style="text-align: left;">Calculé à partir de Abonnés gagnés et Portée</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Engagement</strong></td>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">Interactions (j'aime, commentaires, partages, enregistrements) rapportées à la portée</td>
+<td style="text-align: left;">Taux d'engagement (%)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Engagement</td>
+<td style="text-align: left;">J'aime, commentaires, partages, enregistrements</td>
+<td style="text-align: left;">Nombre de chaque interaction ; taux de partage et d'enregistrement rapportés à la portée</td>
+<td style="text-align: left;">J'aime, Commentaires, Taux de partage (%), Taux d'enregistrement (%)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Le fichier source.</strong> Tous ces KPI, viennent de la base des réels : reels_base.csv (481 réels, une ligne par réel, séparateur « ; », à ouvrir dans Excel). Les vues, la portée, les interactions et les abonnés viennent des statistiques Instagram.</p></div><div class="jsec jsec-2"><h4>Pourquoi viser des réels viraux ?</h4><p><strong>Qu'appelle-t-on un réel viral ?</strong> Un réel n'est pas classé viral selon un nombre de vues fixe, mais en le comparant aux réels publiés à la même période :</p>
+<ol>
+<li>
+<p>On calcule la <strong>médiane des vues des 30 réels publiés autour de lui</strong> (environ 15 avant et 15 après).</p>
+</li>
+<li>
+<p>On divise ses vues par cette médiane : c'est son <strong>indice de viralité</strong>. 1 = un réel habituel ; 2 = deux fois plus de vues que d'habitude.</p>
+</li>
+<li>
+<p>Le réel est <strong>viral si son indice est d'au moins 2</strong>, et <strong>très viral s'il est d'au moins 5</strong>.</p>
+</li>
+</ol>
+<p><strong>Exemple.</strong> Si les réels publiés autour font une médiane de 15 000 vues, un réel est viral à partir de 30 000 vues, et très viral à partir de 75 000.</p>
+<p><strong>Pourquoi ne pas prendre un seuil fixe ?</strong> L'audience du compte et la saison font varier les vues : un réel à 20 000 vues est un succès à une période creuse et un réel ordinaire à une période forte. La comparaison avec les réels voisins retire cet effet. Avec cette règle, 107 réels sur 481 sont viraux (22 %), dont 51 très viraux.</p>
+<figure class="tfig"><img src="assets/tests/image10.png" alt="reels_base.csv · 481 réels, janvier 2025 – octobre 2026" loading="lazy"></figure></div><details class="test" id="test-H10"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H10</span><h3>Faut-il chercher à faire des réels viraux pour gagner des abonnés ?</h3><span class="pill ok">Significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question de recherche.</strong> Un réel viral fait-il gagner plus d'abonnés qu'un réel non viral ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : un réel viral fait gagner autant d'abonnés qu'un réel non viral. H1 : il n'en fait pas gagner autant. Si p &lt; 0,05, l'écart n'est pas dû au hasard : on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 481 réels publiés du 01/01/2025 au 21/10/2026 : 107 viraux et 374 non viraux. Un réel est viral s'il fait au moins 2 fois plus de vues que les réels publiés autour de lui. Source : reels_base.csv, complété par l'export Instagram du 22/10/2026 pour 32 réels de septembre-octobre 2026.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (viraux et non viraux) sur un nombre (les abonnés gagnés) : c'est le cas du test t pour échantillons indépendants. Le test de Levene montre que les deux groupes ne sont pas aussi dispersés l'un que l'autre (p &lt; 0,001) : on lit donc la ligne « variances inégales » (Welch). Comme quelques réels énormes tirent la moyenne vers le haut, on vérifie avec un test de Mann-Whitney, qui compare les rangs et n'est pas faussé par ces extrêmes.</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Les réels viraux font en moyenne 184 abonnés de plus (191 contre 8). Le hasard seul pourrait créer un écart d'environ 42 abonnés. L'écart observé est donc 4,4 fois plus grand que le hasard (<strong>t = 4,37</strong>). La probabilité d'obtenir un tel écart par hasard est <strong>p = 0,00003</strong>, soit 3 chances sur 100 000.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si p est sous <strong>0,05</strong> (moins de 5 % de risque que ce soit le hasard), le résultat est significatif. Ici <strong>p = 0,00003</strong>, bien en dessous : <strong>le résultat est significatif</strong>, l'écart n'est pas dû au hasard.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> En moyenne, un réel viral fait gagner 191 abonnés, contre 8 pour un réel non viral (t = 4,37 ; ddl = 106 ; p &lt; 0,001) : l'écart n'est pas dû au hasard. Pour un réel typique (médiane), c'est 53 contre 4, soit environ 50 abonnés de plus par réel (IC 95 % : +32 à +66). Mann-Whitney confirme (p &lt; 0,001). <strong>Verdict : on rejette H0, les réels viraux font gagner plus d'abonnés.</strong></p>
+</li>
+<li>
+<p><strong>Interprétation.</strong> En clair, ce ne sont pas tous les réels qui font grandir le compte, ce sont les réels viraux. Ils ne représentent qu'un réel sur cinq, mais ils ramènent presque 9 abonnés sur 10. Un réel viral, c'est une cinquantaine d'abonnés ; un réel classique, à peine quatre.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image11.png" alt="reels_base.csv · 481 réels, janvier 2025 – octobre 2026" loading="lazy"></figure></div></details><details class="test" id="test-H11"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H11</span><h3>Les réels viraux engagent-ils plus leur audience ?</h3><span class="pill warn">Significatif, sens inverse</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question de recherche.</strong> Un réel viral fait-il plus réagir les comptes qu'il touche (taux d'engagement) qu'un réel non viral ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : un réel viral a le même taux d'engagement qu'un réel non viral. H1 : il n'a pas le même. Si p &lt; 0,05, l'écart n'est pas dû au hasard : on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 481 réels publiés du 01/01/2025 au 21/10/2026 : 107 viraux et 374 non viraux. Le taux d'engagement = (j'aime + commentaires + partages + enregistrements) ÷ comptes touchés × 100. Source : reels_base.csv, complété par l'export Instagram du 22/10/2026 pour 32 réels de septembre-octobre 2026.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (viraux et non viraux) sur un nombre (le taux d'engagement) : c'est le cas du test t pour échantillons indépendants. Le test de Levene montre que les deux groupes ne sont pas aussi dispersés l'un que l'autre (p &lt; 0,001) : on lit donc la ligne « variances inégales » (Welch). Comme quelques réels très forts tirent la moyenne, on vérifie avec un test de Mann-Whitney, qui compare les rangs et n'est pas faussé par ces extrêmes.</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Les réels viraux ont en moyenne un taux d'engagement plus bas de 0,59 point (3,32 % contre 3,91 %). Le hasard seul pourrait créer un écart d'environ 0,26 point. L'écart observé est donc 2,3 fois plus grand que le hasard (<strong>t = −2,28</strong>). La probabilité d'obtenir un tel écart par hasard est <strong>p = 0,024</strong>, soit environ 2 chances sur 100.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si p est sous <strong>0,05</strong> (moins de 5 % de risque que ce soit le hasard), le résultat est significatif. Ici <strong>p = 0,024</strong>, en dessous : <strong>le résultat est significatif</strong>, l'écart n'est pas dû au hasard.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> En moyenne, un réel viral a un taux d'engagement de 3,32 %, contre 3,91 % pour un réel non viral. <strong>Verdict : on rejette H0, mais dans le sens inverse de l'intuition : les réels viraux engagent moins.</strong></p>
+</li>
+<li>
+<p><strong>Interprétation.</strong> En clair, un réel viral fait moins réagir : sur 100 comptes, environ 3 réagissent, contre 4 pour un réel classique. C'est logique : un réel viral sort de la communauté et touche surtout des inconnus, qui likent et commentent moins. Mais en nombre, il fait bien plus d'interactions : environ 1 300 contre 280. Autrement dit, la viralité apporte du volume, pas un meilleur taux.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Le résultat confirme une règle connue des réseaux sociaux : la viralité est un levier de <strong>visibilité</strong>, pas d'engagement. Un réel viral sert à aller chercher de nouveaux abonnés ; il ne suffit pas à créer une relation avec eux. La stratégie doit donc fonctionner en deux temps : <strong>attirer</strong> avec des réels pensés pour la portée, puis <strong>engager</strong> la communauté gagnée avec des contenus de proximité (stories, réponses aux commentaires, coulisses, questions à l'audience).</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image12.png" alt="reels_base.csv complété par l'export Instagram du 22/10/2026 · 481 réels" loading="lazy"></figure></div></details><div class="jsec jsec-2"><h4>Construction du réel (en amont)</h4></div><details class="test" id="test-H12"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H12</span><h3>Est-ce que certains thèmes abordés dans les réels améliorent les performances du réel ?</h3><span class="pill warn">Selon le thème</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><p><strong>Question de recherche.</strong> Sur les 359 réels où elle parle, le thème principal du réel est-il associé à une différence de portée, de viralité, de taux d'engagement, de j'aime, de commentaires, de partages, d'enregistrements ou d'abonnés gagnés ?</p>
+<h4><strong>Méthode commune aux 10 thèmes</strong></h4>
+<ul>
+<li>
+<p><strong>Périmètre.</strong> Sur les 481 réels, elle parle dans 359 (à l'écran ou en voix off). Les 122 réels sans parole sont exclus : on ne peut pas savoir de quoi ils parlent. Les <strong>10 thèmes</strong> ont tous au moins 19 réels, assez pour comparer : on garde donc les <strong>359 réels</strong>.</p>
+</li>
+<li>
+<p><strong>Une question par thème, 8 critères.</strong> Pour chaque thème, on compare ses réels à tous les autres réels où elle parle, sur 8 critères : <strong>portée</strong> (nombre de comptes touchés), <strong>viralité</strong> (part de réels viraux), <strong>taux d'engagement</strong> (capacité à susciter des interactions), <strong>j'aime</strong>, <strong>commentaires</strong>, <strong>partages</strong>, <strong>enregistrements</strong> et <strong>abonnés gagnés</strong>.</p>
+</li>
+<li>
+<p><strong>Quelle viralité.</strong> La même que dans tout le dossier : un réel est viral s'il fait au moins 2 fois les vues médianes des réels publiés autour de lui. Cela neutralise la croissance du compte : chaque réel est jugé par rapport à ses voisins. Sur les 359 réels où elle parle, 22 % sont viraux.</p>
+</li>
+<li>
+<p><strong>Pourquoi Mann-Whitney.</strong> Pour les 7 critères chiffrés, on compare deux groupes séparés (le thème contre les autres), de tailles très différentes. Quelques réels très viraux tirent les moyennes vers le haut : Mann-Whitney compare les rangs plutôt que les moyennes, il n'est donc pas faussé par ces extrêmes.</p>
+</li>
+<li>
+<p><strong>Pourquoi Fisher pour la viralité.</strong> Viral oui / non n'est pas un nombre mais une catégorie : on compare deux pourcentages dans un tableau 2 × 2. Avec de petits groupes, le test exact de Fisher est plus fiable que le khi².</p>
+</li>
+<li>
+<p><strong>Pourquoi corriger les p.</strong> 10 thèmes × 8 critères = 80 tests. À 5 % de risque chacun, on aurait environ 4 « faux résultats » par simple hasard. La correction de Benjamini-Hochberg relève la barre pour éviter ces faux positifs : c'est la colonne « p corrigée » des tableaux. Un écart est <strong>significatif</strong> si sa p corrigée est sous 0,05 ; une <strong>tendance</strong> si seule la p brute l'est.</p>
+</li>
+</ul>
+<h4><strong>Thème 1 — Vie familiale</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Parler de sa vie familiale améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels vie familiale performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 86 réels vie familiale, 273 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels vie familiale contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels vie familiale se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur les abonnés gagnés : p = 0,004. Comme on fait 80 tests, on corrige : p corrigée = 0,03.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, les enregistrements (<strong>0,04</strong>) et les abonnés gagnés (<strong>0,03</strong>) passent sous le seuil : <strong>significatif</strong>. Les autres critères restent au-dessus : pas de différence prouvée. Tendance non confirmée après correction : les j'aime.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Écarts prouvés : Enregistrements : 8,5 contre 13 (−35 %) ; Abonnés gagnés : 5 contre 9 (−44 %). <strong>Verdict : on rejette H0 pour les enregistrements et les abonnés gagnés.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Vie familiale (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">8 992</td>
+<td style="text-align: left;">10 113</td>
+<td style="text-align: left;">−11 %</td>
+<td style="text-align: left;">0,35</td>
+<td style="text-align: left;">0,64</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viralité (part de réels viraux)</td>
+<td style="text-align: left;">21 %</td>
+<td style="text-align: left;">23 %</td>
+<td style="text-align: left;">−11 %</td>
+<td style="text-align: left;">0,66</td>
+<td style="text-align: left;">0,81</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">3,65 %</td>
+<td style="text-align: left;">3,9 %</td>
+<td style="text-align: left;">−6 %</td>
+<td style="text-align: left;">0,05</td>
+<td style="text-align: left;">0,22</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">J'aime</td>
+<td style="text-align: left;">280</td>
+<td style="text-align: left;">339</td>
+<td style="text-align: left;">−18 %</td>
+<td style="text-align: left;">0,04</td>
+<td style="text-align: left;">0,16</td>
+<td style="text-align: left;">Tendance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commentaires</td>
+<td style="text-align: left;">22</td>
+<td style="text-align: left;">26</td>
+<td style="text-align: left;">−17 %</td>
+<td style="text-align: left;">0,27</td>
+<td style="text-align: left;">0,56</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partages</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">+50 %</td>
+<td style="text-align: left;">0,59</td>
+<td style="text-align: left;">0,76</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Enregistrements</strong></td>
+<td style="text-align: left;">8,5</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">−35 %</td>
+<td style="text-align: left;">0,005</td>
+<td style="text-align: left;">0,04</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Abonnés gagnés</strong></td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">−44 %</td>
+<td style="text-align: left;">0,004</td>
+<td style="text-align: left;">0,03</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> La vie familiale fait aussi bien que les autres réels sur la portée, la viralité, le taux d'engagement, les commentaires et les partages : c'est un contenu qui plaît, qui crée de la proximité et qui fait partie de l'identité du compte. Son rôle est surtout de fidéliser la communauté existante. Pour recruter de nouveaux abonnés, il pèse un peu moins : on garde moins souvent ces réels en enregistrement, et ils font gagner un peu moins d'abonnés (5 contre 9 en médiane).</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image13.png" alt="reels_10_themes.csv × reels_base.csv · 86 réels vie familiale contre 273" loading="lazy"></figure>
+<h4><strong>Thème 2 — Anecdotes clients</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Raconter des anecdotes clients améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels anecdotes clients performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 42 réels anecdotes clients, 317 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels anecdotes clients contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels anecdotes clients se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur la viralité : p = 0,12. Comme on fait 80 tests, on corrige : p corrigée = 0,36.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, aucune p corrigée ne passe sous le seuil (la plus basse vaut <strong>0,36</strong>) : <strong>non significatif</strong>, les écarts observés peuvent venir du hasard.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Aucun écart ne tient après correction. <strong>Verdict : on ne rejette pas H0, aucun écart prouvé.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Anecdotes clients (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">11 200</td>
+<td style="text-align: left;">9 820</td>
+<td style="text-align: left;">+14 %</td>
+<td style="text-align: left;">0,44</td>
+<td style="text-align: left;">0,69</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viralité (part de réels viraux)</td>
+<td style="text-align: left;">33 %</td>
+<td style="text-align: left;">21 %</td>
+<td style="text-align: left;">+55 %</td>
+<td style="text-align: left;">0,12</td>
+<td style="text-align: left;">0,36</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">4,1 %</td>
+<td style="text-align: left;">3,8 %</td>
+<td style="text-align: left;">+8 %</td>
+<td style="text-align: left;">0,24</td>
+<td style="text-align: left;">0,54</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">J'aime</td>
+<td style="text-align: left;">342</td>
+<td style="text-align: left;">315</td>
+<td style="text-align: left;">+9 %</td>
+<td style="text-align: left;">0,21</td>
+<td style="text-align: left;">0,51</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commentaires</td>
+<td style="text-align: left;">27</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">+8 %</td>
+<td style="text-align: left;">0,89</td>
+<td style="text-align: left;">0,93</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partages</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">+0 %</td>
+<td style="text-align: left;">0,52</td>
+<td style="text-align: left;">0,75</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Enregistrements</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">+8 %</td>
+<td style="text-align: left;">0,21</td>
+<td style="text-align: left;">0,51</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Abonnés gagnés</td>
+<td style="text-align: left;">9,5</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">+36 %</td>
+<td style="text-align: left;">0,21</td>
+<td style="text-align: left;">0,51</td>
+<td style="text-align: left;">Non</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> En clair, les histoires de clientes font comme les autres réels sur les 8 critères : aucun écart prouvé.</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image14.png" alt="reels_10_themes.csv × reels_base.csv · 42 réels anecdotes clients contre 317" loading="lazy"></figure>
+<h4><strong>Thème 3 — Vie d'entrepreneur</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Parler de sa vie d'entrepreneur améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels vie d'entrepreneur performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 40 réels vie d'entrepreneur, 319 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels vie d'entrepreneur contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels vie d'entrepreneur se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur les abonnés gagnés : p = 0,007. Comme on fait 80 tests, on corrige : p corrigée = 0,045.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, les abonnés gagnés (<strong>0,045</strong>) passent sous le seuil : <strong>significatif</strong>. Les autres critères restent au-dessus : pas de différence prouvée. Tendance non confirmée après correction : les j'aime.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Écart prouvé : Abonnés gagnés : 15 contre 7 (+114 %). <strong>Verdict : on rejette H0 pour les abonnés gagnés.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Vie d'entrepreneur (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">11 650</td>
+<td style="text-align: left;">9 685</td>
+<td style="text-align: left;">+20 %</td>
+<td style="text-align: left;">0,09</td>
+<td style="text-align: left;">0,29</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viralité (part de réels viraux)</td>
+<td style="text-align: left;">32 %</td>
+<td style="text-align: left;">22 %</td>
+<td style="text-align: left;">+50 %</td>
+<td style="text-align: left;">0,16</td>
+<td style="text-align: left;">0,46</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">3,95 %</td>
+<td style="text-align: left;">3,8 %</td>
+<td style="text-align: left;">+4 %</td>
+<td style="text-align: left;">0,76</td>
+<td style="text-align: left;">0,85</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">J'aime</td>
+<td style="text-align: left;">470</td>
+<td style="text-align: left;">310</td>
+<td style="text-align: left;">+52 %</td>
+<td style="text-align: left;">0,04</td>
+<td style="text-align: left;">0,16</td>
+<td style="text-align: left;">Tendance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commentaires</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">+0 %</td>
+<td style="text-align: left;">0,58</td>
+<td style="text-align: left;">0,76</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partages</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">+0 %</td>
+<td style="text-align: left;">0,22</td>
+<td style="text-align: left;">0,51</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Enregistrements</td>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">+33 %</td>
+<td style="text-align: left;">0,07</td>
+<td style="text-align: left;">0,25</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Abonnés gagnés</strong></td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">+114 %</td>
+<td style="text-align: left;">0,007</td>
+<td style="text-align: left;">0,045</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> En clair, quand elle raconte son quotidien de cheffe d'entreprise, deux fois plus de gens s'abonnent (15 abonnés en médiane contre 7), sans que le réel touche beaucoup plus de monde. C'est le contenu qui transforme le mieux l'audience en abonnés.</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image15.png" alt="" loading="lazy"></figure>
+<h4><strong>Thème 4 — Humour de situation</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Faire de l'humour de situation améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels humour de situation performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 39 réels humour de situation, 320 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels humour de situation contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels humour de situation se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur les enregistrements : p = 0,003. Comme on fait 80 tests, on corrige : p corrigée = 0,03.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, les enregistrements (<strong>0,03</strong>) et les abonnés gagnés (<strong>0,03</strong>) passent sous le seuil : <strong>significatif</strong>. Les autres critères restent au-dessus : pas de différence prouvée. Tendances non confirmées après correction : la viralité et les j'aime.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Écarts prouvés : Enregistrements : 8 contre 13 (−38 %) ; Abonnés gagnés : 5 contre 8 (−38 %). <strong>Verdict : on rejette H0 pour les enregistrements et les abonnés gagnés.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Humour de situation (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">8 440</td>
+<td style="text-align: left;">10 118</td>
+<td style="text-align: left;">−17 %</td>
+<td style="text-align: left;">0,06</td>
+<td style="text-align: left;">0,24</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viralité (part de réels viraux)</td>
+<td style="text-align: left;">8 %</td>
+<td style="text-align: left;">25 %</td>
+<td style="text-align: left;">−69 %</td>
+<td style="text-align: left;">0,01</td>
+<td style="text-align: left;">0,08</td>
+<td style="text-align: left;">Tendance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">3,5 %</td>
+<td style="text-align: left;">3,8 %</td>
+<td style="text-align: left;">−8 %</td>
+<td style="text-align: left;">0,22</td>
+<td style="text-align: left;">0,51</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">J'aime</td>
+<td style="text-align: left;">235</td>
+<td style="text-align: left;">335</td>
+<td style="text-align: left;">−30 %</td>
+<td style="text-align: left;">0,01</td>
+<td style="text-align: left;">0,08</td>
+<td style="text-align: left;">Tendance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commentaires</td>
+<td style="text-align: left;">22</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">−12 %</td>
+<td style="text-align: left;">0,83</td>
+<td style="text-align: left;">0,89</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partages</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">+50 %</td>
+<td style="text-align: left;">0,56</td>
+<td style="text-align: left;">0,76</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Enregistrements</strong></td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">−38 %</td>
+<td style="text-align: left;">0,003</td>
+<td style="text-align: left;">0,03</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Abonnés gagnés</strong></td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">−38 %</td>
+<td style="text-align: left;">0,004</td>
+<td style="text-align: left;">0,03</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> En clair, l'humour fait sourire mais ne laisse pas de trace : moins d'enregistrements et moins d'abonnés (5 contre 8 en médiane). Le public consomme la blague sans retenir la marque.</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image16.png" alt="reels_10_themes.csv × reels_base.csv · 39 réels humour de situation contre 320" loading="lazy"></figure>
+<h4><strong>Thème 5 — Réseaux sociaux</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Parler des réseaux sociaux et de sa communauté améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels réseaux sociaux performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 38 réels réseaux sociaux, 321 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels réseaux sociaux contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels réseaux sociaux se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur les commentaires : p = 0,004. Comme on fait 80 tests, on corrige : p corrigée = 0,03.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, les commentaires (<strong>0,03</strong>) passent sous le seuil : <strong>significatif</strong>. Les autres critères restent au-dessus : pas de différence prouvée.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Écart prouvé : Commentaires : 43 contre 24 (+79 %). <strong>Verdict : on rejette H0 pour les commentaires.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Réseaux sociaux (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">8 715</td>
+<td style="text-align: left;">9 930</td>
+<td style="text-align: left;">−12 %</td>
+<td style="text-align: left;">0,34</td>
+<td style="text-align: left;">0,64</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viralité (part de réels viraux)</td>
+<td style="text-align: left;">11 %</td>
+<td style="text-align: left;">24 %</td>
+<td style="text-align: left;">−57 %</td>
+<td style="text-align: left;">0,07</td>
+<td style="text-align: left;">0,24</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">4,15 %</td>
+<td style="text-align: left;">3,7 %</td>
+<td style="text-align: left;">+12 %</td>
+<td style="text-align: left;">0,22</td>
+<td style="text-align: left;">0,51</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">J'aime</td>
+<td style="text-align: left;">296</td>
+<td style="text-align: left;">325</td>
+<td style="text-align: left;">−9 %</td>
+<td style="text-align: left;">0,50</td>
+<td style="text-align: left;">0,74</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Commentaires</strong></td>
+<td style="text-align: left;">43</td>
+<td style="text-align: left;">24</td>
+<td style="text-align: left;">+79 %</td>
+<td style="text-align: left;">0,004</td>
+<td style="text-align: left;">0,03</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Partages</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">−50 %</td>
+<td style="text-align: left;">0,08</td>
+<td style="text-align: left;">0,26</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Enregistrements</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">−4 %</td>
+<td style="text-align: left;">0,28</td>
+<td style="text-align: left;">0,56</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Abonnés gagnés</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">+64 %</td>
+<td style="text-align: left;">0,17</td>
+<td style="text-align: left;">0,47</td>
+<td style="text-align: left;">Non</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> En clair, parler de son compte et de sa communauté (concours, critiques, remerciements) fait réagir : presque deux fois plus de commentaires (43 contre 24 en médiane). C'est le thème qui ouvre le plus la conversation.</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image17.png" alt="reels_10_themes.csv × reels_base.csv · 38 réels réseaux sociaux contre 321" loading="lazy"></figure>
+<h4><strong>Thème 6 — Coulisses</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Montrer les coulisses de l'atelier améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels coulisses performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 27 réels coulisses, 332 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels coulisses contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels coulisses se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur les commentaires : p = 0,03. Comme on fait 80 tests, on corrige : p corrigée = 0,15.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, aucune p corrigée ne passe sous le seuil (la plus basse vaut <strong>0,15</strong>) : <strong>non significatif</strong>, les écarts observés peuvent venir du hasard. Tendance non confirmée après correction : les commentaires.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Aucun écart ne tient après correction. <strong>Verdict : on ne rejette pas H0, aucun écart prouvé.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Coulisses (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">7 130</td>
+<td style="text-align: left;">9 910</td>
+<td style="text-align: left;">−28 %</td>
+<td style="text-align: left;">0,14</td>
+<td style="text-align: left;">0,42</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viralité (part de réels viraux)</td>
+<td style="text-align: left;">26 %</td>
+<td style="text-align: left;">23 %</td>
+<td style="text-align: left;">+15 %</td>
+<td style="text-align: left;">0,64</td>
+<td style="text-align: left;">0,80</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">4,1 %</td>
+<td style="text-align: left;">3,8 %</td>
+<td style="text-align: left;">+8 %</td>
+<td style="text-align: left;">0,55</td>
+<td style="text-align: left;">0,75</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">J'aime</td>
+<td style="text-align: left;">287</td>
+<td style="text-align: left;">322</td>
+<td style="text-align: left;">−11 %</td>
+<td style="text-align: left;">0,48</td>
+<td style="text-align: left;">0,72</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commentaires</td>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">26</td>
+<td style="text-align: left;">−31 %</td>
+<td style="text-align: left;">0,03</td>
+<td style="text-align: left;">0,15</td>
+<td style="text-align: left;">Tendance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partages</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">−50 %</td>
+<td style="text-align: left;">0,27</td>
+<td style="text-align: left;">0,56</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Enregistrements</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">+0 %</td>
+<td style="text-align: left;">0,54</td>
+<td style="text-align: left;">0,75</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Abonnés gagnés</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">−38 %</td>
+<td style="text-align: left;">0,55</td>
+<td style="text-align: left;">0,75</td>
+<td style="text-align: left;">Non</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> En clair, montrer la fabrication ne change rien de prouvé : un peu moins de commentaires, mais l'écart ne tient pas après correction, avec 27 réels seulement.</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image18.png" alt="reels_10_themes.csv × reels_base.csv · 27 réels coulisses contre 332" loading="lazy"></figure>
+<h4><strong>Thème 7 — Présentation des produits</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Présenter les produits améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels présentation des produits performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 25 réels présentation des produits, 334 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels présentation des produits contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels présentation des produits se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur les enregistrements : p = 0,35. Comme on fait 80 tests, on corrige : p corrigée = 0,64.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, aucune p corrigée ne passe sous le seuil (la plus basse vaut <strong>0,64</strong>) : <strong>non significatif</strong>, les écarts observés peuvent venir du hasard.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Aucun écart ne tient après correction. <strong>Verdict : on ne rejette pas H0, aucun écart prouvé.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Présentation des produits (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">11 306</td>
+<td style="text-align: left;">9 832</td>
+<td style="text-align: left;">+15 %</td>
+<td style="text-align: left;">0,90</td>
+<td style="text-align: left;">0,93</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viralité (part de réels viraux)</td>
+<td style="text-align: left;">28 %</td>
+<td style="text-align: left;">22 %</td>
+<td style="text-align: left;">+25 %</td>
+<td style="text-align: left;">0,62</td>
+<td style="text-align: left;">0,79</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">3,5 %</td>
+<td style="text-align: left;">3,8 %</td>
+<td style="text-align: left;">−8 %</td>
+<td style="text-align: left;">0,39</td>
+<td style="text-align: left;">0,67</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">J'aime</td>
+<td style="text-align: left;">310</td>
+<td style="text-align: left;">322</td>
+<td style="text-align: left;">−4 %</td>
+<td style="text-align: left;">0,72</td>
+<td style="text-align: left;">0,85</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commentaires</td>
+<td style="text-align: left;">23</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">−8 %</td>
+<td style="text-align: left;">0,84</td>
+<td style="text-align: left;">0,90</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partages</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">+0 %</td>
+<td style="text-align: left;">0,83</td>
+<td style="text-align: left;">0,89</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Enregistrements</td>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">+42 %</td>
+<td style="text-align: left;">0,35</td>
+<td style="text-align: left;">0,64</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Abonnés gagnés</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">−12 %</td>
+<td style="text-align: left;">0,99</td>
+<td style="text-align: left;">1,00</td>
+<td style="text-align: left;">Non</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> En clair, présenter les bougies ne change rien aux performances : ces réels font comme les autres sur les 8 critères.</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image19.png" alt="reels_10_themes.csv × reels_base.csv · 25 réels présentation des produits contre 334" loading="lazy"></figure>
+<h4><strong>Thème 8 — Prix juste</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Parler du prix juste et de la valeur du travail améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels prix juste performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 21 réels prix juste, 338 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels prix juste contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels prix juste se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur les enregistrements : p &lt; 0,001, soit moins d’une chance sur 1 000. Comme on fait 80 tests, on corrige : p corrigée &lt; 0,001.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, la portée (<strong>0,004</strong>), la viralité (<strong>0,03</strong>), les j'aime (<strong>&lt; 0,001</strong>), les commentaires (<strong>0,004</strong>), les partages (<strong>0,03</strong>), les enregistrements (<strong>&lt; 0,001</strong>) et les abonnés gagnés (<strong>&lt; 0,001</strong>) passent sous le seuil : <strong>significatif</strong>. Le taux d'engagement reste au-dessus : pas de différence prouvée.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Écarts prouvés : Portée : 33 117 contre 9 663 (+243 %) ; Viralité : 52 % contre 21 % (+149 %) ; J'aime : 1 351 contre 310 (+337 %) ; Commentaires : 64 contre 25 (+156 %) ; Partages : 5 contre 2 (+150 %) ; Enregistrements : 37 contre 12 (+208 %) ; Abonnés gagnés : 57 contre 7 (+714 %). <strong>Verdict : on rejette H0 pour la portée, la viralité, les j'aime, les commentaires, les partages, les enregistrements et les abonnés gagnés.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Prix juste (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Portée</strong></td>
+<td style="text-align: left;">33 117</td>
+<td style="text-align: left;">9 663</td>
+<td style="text-align: left;">+243 %</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;">0,004</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Viralité (part de réels viraux)</strong></td>
+<td style="text-align: left;">52 %</td>
+<td style="text-align: left;">21 %</td>
+<td style="text-align: left;">+149 %</td>
+<td style="text-align: left;">0,002</td>
+<td style="text-align: left;">0,03</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">4,5 %</td>
+<td style="text-align: left;">3,8 %</td>
+<td style="text-align: left;">+18 %</td>
+<td style="text-align: left;">0,06</td>
+<td style="text-align: left;">0,24</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>J'aime</strong></td>
+<td style="text-align: left;">1 351</td>
+<td style="text-align: left;">310</td>
+<td style="text-align: left;">+337 %</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Commentaires</strong></td>
+<td style="text-align: left;">64</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">+156 %</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;">0,004</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Partages</strong></td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">+150 %</td>
+<td style="text-align: left;">0,002</td>
+<td style="text-align: left;">0,03</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Enregistrements</strong></td>
+<td style="text-align: left;">37</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">+208 %</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Abonnés gagnés</strong></td>
+<td style="text-align: left;">57</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">+714 %</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> C'est de loin le thème le plus fort : quand elle explique pourquoi une bougie artisanale coûte ce prix, le réel touche 3 fois plus de comptes, récolte 4 fois plus de j'aime, 3 fois plus d'enregistrements et 8 fois plus d'abonnés. Plus d'un réel sur deux devient viral (52 % contre 21 %). Le sujet touche, fait débattre et donne une raison de suivre la marque.</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image20.png" alt="reels_10_themes.csv × reels_base.csv · 21 réels prix juste contre 338" loading="lazy"></figure>
+<p>reels_10_themes.csv × reels_base.csv · 21 réels prix juste contre 338</p>
+<h4><strong>Thème 9 — Valeurs et société</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Parler de ses valeurs et de sujets de société améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels valeurs et société performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 22 réels valeurs et société, 337 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels valeurs et société contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels valeurs et société se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur les commentaires : p = 0,31. Comme on fait 80 tests, on corrige : p corrigée = 0,60.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, aucune p corrigée ne passe sous le seuil (la plus basse vaut <strong>0,60</strong>) : <strong>non significatif</strong>, les écarts observés peuvent venir du hasard.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Aucun écart ne tient après correction. <strong>Verdict : on ne rejette pas H0, aucun écart prouvé.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Valeurs et société (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">10 080</td>
+<td style="text-align: left;">9 845</td>
+<td style="text-align: left;">+2 %</td>
+<td style="text-align: left;">0,74</td>
+<td style="text-align: left;">0,85</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viralité (part de réels viraux)</td>
+<td style="text-align: left;">14 %</td>
+<td style="text-align: left;">23 %</td>
+<td style="text-align: left;">−42 %</td>
+<td style="text-align: left;">0,43</td>
+<td style="text-align: left;">0,69</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">3,65 %</td>
+<td style="text-align: left;">3,8 %</td>
+<td style="text-align: left;">−4 %</td>
+<td style="text-align: left;">0,71</td>
+<td style="text-align: left;">0,85</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">J'aime</td>
+<td style="text-align: left;">344</td>
+<td style="text-align: left;">319</td>
+<td style="text-align: left;">+8 %</td>
+<td style="text-align: left;">0,73</td>
+<td style="text-align: left;">0,85</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commentaires</td>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">−26 %</td>
+<td style="text-align: left;">0,31</td>
+<td style="text-align: left;">0,60</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partages</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">+50 %</td>
+<td style="text-align: left;">0,47</td>
+<td style="text-align: left;">0,72</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Enregistrements</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">+21 %</td>
+<td style="text-align: left;">0,42</td>
+<td style="text-align: left;">0,68</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Abonnés gagnés</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">+0 %</td>
+<td style="text-align: left;">0,39</td>
+<td style="text-align: left;">0,67</td>
+<td style="text-align: left;">Non</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> En clair, parler de ses valeurs ne change rien de prouvé, avec 22 réels.</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image21.png" alt="reels_10_themes.csv × reels_base.csv · 22 réels valeurs et société contre 337" loading="lazy"></figure>
+<h4><strong>Thème 10 — Lancements et fêtes</strong></h4>
+<ul>
+<li>
+<p><strong>Question de recherche.</strong> Parler des lancements et des fêtes améliore-t-il les performances du réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : les réels lancements et fêtes performent comme les autres réels où elle parle, sur les 8 critères. H1 : ils performent différemment sur au moins un critère. Si la p corrigée est sous 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 359 réels où elle parle, publiés du 01/01/2025 au 21/10/2026 : 19 réels lancements et fêtes, 340 autres.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (les réels lancements et fêtes contre tous les autres). Sur les 7 critères chiffrés, quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs. La viralité est un oui / non : on compare deux pourcentages avec le test exact de Fisher. Comme on fait 80 tests (10 thèmes × 8 critères), on corrige les p (Benjamini-Hochberg).</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Pour chaque critère chiffré, Mann-Whitney range les 359 réels du plus faible au plus fort et regarde si les réels lancements et fêtes se retrouvent plus souvent en haut (ou en bas) du classement que si le thème ne jouait aucun rôle. Pour la viralité, le test exact de Fisher compare la part de réels viraux. p est la probabilité d'obtenir un tel décalage par simple hasard. L'écart le plus net porte sur la viralité : p = 0,26. Comme on fait 80 tests, on corrige : p corrigée = 0,56.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, aucune p corrigée ne passe sous le seuil (la plus basse vaut <strong>0,56</strong>) : <strong>non significatif</strong>, les écarts observés peuvent venir du hasard.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Aucun écart ne tient après correction. <strong>Verdict : on ne rejette pas H0, aucun écart prouvé.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Critère</th>
+<th style="text-align: left;">Lancements et fêtes (médiane)</th>
+<th style="text-align: left;">Autres réels (médiane)</th>
+<th style="text-align: left;">Écart</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Portée</td>
+<td style="text-align: left;">9 670</td>
+<td style="text-align: left;">9 899</td>
+<td style="text-align: left;">−2 %</td>
+<td style="text-align: left;">0,80</td>
+<td style="text-align: left;">0,89</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viralité (part de réels viraux)</td>
+<td style="text-align: left;">11 %</td>
+<td style="text-align: left;">24 %</td>
+<td style="text-align: left;">−55 %</td>
+<td style="text-align: left;">0,26</td>
+<td style="text-align: left;">0,56</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">3,9 %</td>
+<td style="text-align: left;">3,8 %</td>
+<td style="text-align: left;">+3 %</td>
+<td style="text-align: left;">0,75</td>
+<td style="text-align: left;">0,85</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">J'aime</td>
+<td style="text-align: left;">340</td>
+<td style="text-align: left;">314</td>
+<td style="text-align: left;">+8 %</td>
+<td style="text-align: left;">0,58</td>
+<td style="text-align: left;">0,76</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commentaires</td>
+<td style="text-align: left;">27</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">+8 %</td>
+<td style="text-align: left;">0,37</td>
+<td style="text-align: left;">0,65</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partages</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">+0 %</td>
+<td style="text-align: left;">1,00</td>
+<td style="text-align: left;">1,00</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Enregistrements</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">−8 %</td>
+<td style="text-align: left;">0,96</td>
+<td style="text-align: left;">0,99</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Abonnés gagnés</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">7,5</td>
+<td style="text-align: left;">+7 %</td>
+<td style="text-align: left;">0,40</td>
+<td style="text-align: left;">0,67</td>
+<td style="text-align: left;">Non</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Interprétation.</strong> En clair, les réels de lancement et de fêtes font comme les autres : aucun écart prouvé, avec 19 réels.</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image22.png" alt="reels_10_themes.csv × reels_base.csv · 19 réels lancements et fêtes contre 340" loading="lazy"></figure>
+<p>reels_10_themes.csv × reels_base.csv · 19 réels lancements et fêtes contre 340</p>
+<h4><strong>Synthèse : quels thèmes font performer un réel ?</strong></h4>
+<figure class="tfig"><img src="assets/tests/image23.png" alt="reels_10_themes.csv × reels_base.csv · 359 réels où elle parle, 10 thèmes × 8 critères" loading="lazy"></figure>
+<p>reels_10_themes.csv × reels_base.csv · 359 réels où elle parle, 10 thèmes × 8 critères</p>
+<ul>
+<li><strong>Interprétation.</strong> En clair, le thème ne change pas le taux d'engagement : il change le nombre de personnes touchées et ce qu'elles font ensuite. Ce qui fait grandir le compte, c'est quand elle parle de son métier : le prix, son quotidien de cheffe d'entreprise, sa communauté.</li>
+</ul></div></details><details class="test" id="test-H3"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H3</span><h3>Voir sa famille à l&#x27;image attire-t-il plus que lorsqu&#x27;elle est seule ?</h3><span class="pill no">Non significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p>Question marketing. Voir sa famille à l'image attire-t-il plus que lorsqu'elle est seule ?</p>
+</li>
+<li>
+<p>Question de recherche. Les réels avec son mari ou ses filles à l'écran (n = 78) ont-ils plus de viralité (vues ÷ médiane des 30 réels publiés autour) que les réels où personne d'autre n'est à l'écran (n = 355) ?</p>
+</li>
+<li>
+<p>Hypothèse. H0 : en moyenne, les réels avec son mari ou ses filles à l'écran ont la même viralité que les réels où personne d'autre n'est à l'écran ; la présence de son mari ou de ses filles ne change rien. H1 : en moyenne, les réels avec son mari ou ses filles à l'écran n'ont pas la même viralité que les réels où personne d'autre n'est à l'écran. Si p &lt; 0,05, on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p>Périmètre. 433 réels publiés du 01/01/2025 au 20/10/2026 : 78 avec sa famille, 355 seule à l'écran. Le critère « famille à l'écran » = la colonne « Qui sont les autres personnes » contient son mari ou l'une de ses filles. Le groupe de comparaison = réels où personne d'autre n'est à l'écran. L'indicateur est la viralité (vues ÷ médiane des 30 réels publiés autour). 1,00 = un réel normal ; 2,00 = deux fois plus de vues que d'habitude. Source : reels_base_completee.xlsx (« BDD Nettoyé » de l'équipe, 487 réels du 01/01/2025 au 21/10/2026). Exclus : 54 réels où seules d'autres personnes (mère, amies, personne inconnue) sont à l'écran.</p>
+</li>
+<li>
+<p>Test choisi. 78 réels avec sa famille contre 355 réels seule à l'écran : deux groupes indépendants et une variable quantitative (viralité, passée au logarithme car très asymétrique : asymétrie = 12,35), donc test t pour échantillons indépendants. Levene : F = 1,94 ; p = 0,164 → variances égales, ligne « variances égales » retenue. Résultat confirmé par le test de Mann-Whitney, car la distribution reste asymétrique après le logarithme (asymétrie = 1,60 ; aplatissement = 2,78) : ce test ne suppose aucune forme de distribution.</p>
+</li>
+<li>
+<p>Le résultat. 0,10 en moyenne pour les réels avec son mari ou ses filles à l'écran contre 0,31 pour les réels où personne d'autre n'est à l'écran, en ln de la viralité, soit 1,11 contre 1,36 à l'échelle d'origine (t = −1,69 ; ddl = 431 ; p = 0,091). En médiane, 0,93 contre 1,02, soit −0,09 (IC 95 % : −0,31 à 0,12) ; Mann-Whitney p = 0,103. Verdict : non significatif, H0 conservée.</p>
+</li>
+</ul>
+<p>Statistiques de groupe (ln de la viralité)</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Mari ou filles à l'écran</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Moyenne</th>
+<th style="text-align: right;">Écart type</th>
+<th style="text-align: right;">Erreur standard de la moyenne</th>
+<th style="text-align: right;">Médiane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oui</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">0,10</td>
+<td style="text-align: right;">0,83</td>
+<td style="text-align: right;">0,094</td>
+<td style="text-align: right;">−0,07</td>
+</tr>
+<tr>
+<td>Non</td>
+<td style="text-align: right;">355</td>
+<td style="text-align: right;">0,31</td>
+<td style="text-align: right;">1,01</td>
+<td style="text-align: right;">0,054</td>
+<td style="text-align: right;">0,02</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test des échantillons indépendants (ln de la viralité)</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Hypothèse</th>
+<th style="text-align: right;">t</th>
+<th style="text-align: right;">ddl</th>
+<th style="text-align: right;">p unilatéral</th>
+<th style="text-align: right;">p bilatéral</th>
+<th style="text-align: right;">Différence moyenne</th>
+<th style="text-align: right;">Erreur standard</th>
+<th style="text-align: right;">IC 95 % inférieur</th>
+<th style="text-align: right;">IC 95 % supérieur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hypothèse de variances égales</td>
+<td style="text-align: right;">−1,693</td>
+<td style="text-align: right;">431</td>
+<td style="text-align: right;">0,046</td>
+<td style="text-align: right;">0,091</td>
+<td style="text-align: right;">−0,208</td>
+<td style="text-align: right;">0,123</td>
+<td style="text-align: right;">−0,448</td>
+<td style="text-align: right;">0,033</td>
+</tr>
+<tr>
+<td>Hypothèse de variances inégales</td>
+<td style="text-align: right;">−1,921</td>
+<td style="text-align: right;">132,43</td>
+<td style="text-align: right;">0,028</td>
+<td style="text-align: right;">0,057</td>
+<td style="text-align: right;">−0,208</td>
+<td style="text-align: right;">0,108</td>
+<td style="text-align: right;">−0,421</td>
+<td style="text-align: right;">0,006</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p>Interprétation. Les réels avec son mari ou ses filles à l'écran ont une viralité médiane de 0,93 contre 1,02 pour les réels où personne d'autre n'est à l'écran (1,00 = un réel normal), soit 9 % de moins, mais cet écart reste compatible avec le hasard : on ne peut pas affirmer que la présence de son mari ou de ses filles change la viralité.</p>
+</li>
+<li>
+<p>Décision. Ne pas filmer sa famille au nom des vues : un effet n'est pas démontré. Ce qui la ferait changer : un test refait sur les réels publiés après le 21/10/2026 qui donnerait p &lt; 0,05.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image7.png" alt="H3" loading="lazy"></figure>
+<p>La valeur de p (p = 0,091) est la probabilité d'observer un écart au moins aussi grand que celui-ci si la présence de son mari ou de ses filles ne changeait rien ; sous 0,05, on juge l'écart trop grand pour être dû au hasard.</p>
+<p>Ce n'est pas significatif.</p></div></details><details class="test" id="test-H8"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H8</span><h3>Un reel où Jessica montre son visage obtient-il plus de vues ?</h3><span class="pill warn">Significatif, sens inverse</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question marketing.</strong> Un reel où Jessica montre son visage obtient-il plus de vues ?</p>
+</li>
+<li>
+<p><strong>Question de recherche.</strong> Les reels avec un visage en face caméra (n = 215) ont-ils plus de vues relatives que les reels sans (n = 269) ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : en moyenne, les reels avec un visage en face caméra ont les mêmes vues relatives que les autres ; le visage ne change rien. H1 : en moyenne, ils n'ont pas les mêmes vues relatives. Si p &lt; 0,05, on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 484 reels publiés du 01/01/2025 au 21/10/2026 (3 republications comptées une fois ; aucun reel écarté). Un reel est « avec un visage » s'il est en face caméra, c'est-à-dire si un visage est visible plus de 70 % du temps (colonne « Face caméra »). Presque tous les reels montrent un visage à un moment (seulement 10 n'en montrent aucun) : comparer « un visage » contre « aucun » ne laisserait qu'un groupe trop petit pour un test fiable. Vues relatives = vues ÷ médiane des 30 reels publiés autour (1 = vues habituelles à cette période). Source : reels_base_completee.xlsx.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> 215 contre 269 : deux groupes indépendants et une variable quantitative (vues relatives), donc test t pour échantillons indépendants, le plus simple. Justification de l'ajout du logarithme : les vues relatives sont très asymétriques (asymétrie = 11,0, quelques reels viraux), si bien que le test t sur les valeurs brutes dit « non significatif » (p = 0,519) alors que Mann-Whitney dit « significatif » (p &lt; 0,001). Le logarithme, transformation simple, ramène l'asymétrie à 1,6 : le test t porte donc sur le logarithme des vues relatives. Levene : F = 3,55 ; p = 0,060 → variances égales, ligne « variances égales » retenue. Résultat confirmé par Mann-Whitney (p &lt; 0,001).</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> 1,10 fois les vues habituelles en moyenne géométrique pour les reels avec un visage en face caméra contre 1,52 pour les autres, soit un rapport de 0,72 (IC 95 % : 0,60 à 0,86) ; t = -3,55 ; ddl = 482 ; p &lt; 0,001. En médiane, 0,86 contre 1,11 (IC 95 % du rapport des médianes : 0,63 à 0,91) ; Mann-Whitney p &lt; 0,001. <strong>Verdict : significatif, H1 validée, mais dans le sens inverse de celui attendu : H8 (plus de vues avec un visage) n'est pas confirmée.</strong> <strong>Valeur de p :</strong> p &lt; 0,001 veut dire que, si le visage en face caméra ne changeait rien aux vues, on obtiendrait un écart au moins aussi grand par pur hasard dans moins de 1 cas sur 100 ; comme p est inférieur à 0,05, l'écart est significatif.</p>
+</li>
+</ul>
+<p><strong>Statistiques de groupe</strong> (calculées sur le logarithme de la viralité)</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Visage en face caméra</th>
+<th style="text-align: left;">N</th>
+<th style="text-align: left;">Moyenne du log</th>
+<th style="text-align: left;">Écart type</th>
+<th style="text-align: left;">Erreur standard de la moyenne</th>
+<th style="text-align: left;">Médiane du log</th>
+<th style="text-align: left;">Moyenne géométrique (viralité)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Oui</td>
+<td style="text-align: left;">215</td>
+<td style="text-align: left;">0,09</td>
+<td style="text-align: left;">0,95</td>
+<td style="text-align: left;">0,06</td>
+<td style="text-align: left;">-0,16</td>
+<td style="text-align: left;">1,10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">269</td>
+<td style="text-align: left;">0,42</td>
+<td style="text-align: left;">1,04</td>
+<td style="text-align: left;">0,06</td>
+<td style="text-align: left;">0,11</td>
+<td style="text-align: left;">1,52</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Test des échantillons indépendants</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Hypothèse</th>
+<th style="text-align: left;">t</th>
+<th style="text-align: left;">ddl</th>
+<th style="text-align: left;">p unilatéral</th>
+<th style="text-align: left;">p bilatéral</th>
+<th style="text-align: left;">Différence moyenne (log)</th>
+<th style="text-align: left;">Erreur standard</th>
+<th style="text-align: left;">IC 95 % inférieur</th>
+<th style="text-align: left;">IC 95 % supérieur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Variances égales</strong></td>
+<td style="text-align: left;"><strong>-3,55</strong></td>
+<td style="text-align: left;"><strong>482</strong></td>
+<td style="text-align: left;"><strong>1,000</strong></td>
+<td style="text-align: left;"><strong>&lt; 0,001</strong></td>
+<td style="text-align: left;"><strong>-0,32</strong></td>
+<td style="text-align: left;"><strong>0,09</strong></td>
+<td style="text-align: left;"><strong>-0,50</strong></td>
+<td style="text-align: left;"><strong>-0,15</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Variances inégales</td>
+<td style="text-align: left;">-3,59</td>
+<td style="text-align: left;">473,5</td>
+<td style="text-align: left;">1,000</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;">-0,32</td>
+<td style="text-align: left;">0,09</td>
+<td style="text-align: left;">-0,50</td>
+<td style="text-align: left;">-0,15</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>Interprétation.</strong> Un reel avec un visage en face caméra obtient 0,72 fois les vues d'un reel sans (soit 28 % de moins), contre ce que prédisait H8. Ce test montre un lien, pas une cause : les reels en face caméra ont peut-être d'autres points communs (sujet, parole, durée) qui expliquent l'écart.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Ne pas compter sur le visage en face caméra pour gagner des vues ; varier les formats (produit seul, voix off) et surveiller les vues de ces reels, à partir des prochaines publications. <strong>Ce qui la ferait changer :</strong> un nouveau test sur les reels à venir donnant p ≥ 0,05, ou un test qui tienne compte du sujet et de la durée.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image3.gif" alt="Viralité avec et sans visage en face caméra" loading="lazy"></figure></div></details><details class="test" id="test-H9"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H9</span><h3>Un reel où Jessica montre son visage fait-il plus réagir ?</h3><span class="pill no">Non significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question marketing.</strong> Un reel où Jessica montre son visage fait-il plus réagir ?</p>
+</li>
+<li>
+<p><strong>Question de recherche.</strong> Les reels avec un visage en face caméra (n = 215) ont-ils plus d'interactions pour 1 000 comptes touchés que les reels sans (n = 269) ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : en moyenne, les reels avec un visage en face caméra ont les mêmes interactions pour 1 000 comptes touchés que les autres ; le visage ne change rien. H1 : en moyenne, ils n'ont pas les mêmes interactions. Si p &lt; 0,05, on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 484 reels publiés du 01/01/2025 au 21/10/2026 dont la portée est connue (215 avec un visage en face caméra, 269 sans). Même définition du visage que pour H8 (visage visible plus de 70 % du temps). Interactions = j'aime + commentaires + partages + enregistrements, ramenées à 1 000 comptes touchés pour comparer des reels de portées très différentes. Source : reels_base_completee.xlsx.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> 215 contre 269 : deux groupes indépendants et une variable quantitative (interactions pour 1 000 comptes touchés), donc test t pour échantillons indépendants, le plus simple. Levene : F = 0,94 ; p = 0,334 → variances égales, ligne « variances égales » retenue. Résultat confirmé par Mann-Whitney (p = 0,576), car la distribution est asymétrique (asymétrie = 2,3) : pas de logarithme nécessaire ici, les deux tests concluent pareil.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> 37,1 interactions pour 1 000 comptes touchés en moyenne pour les reels avec un visage en face caméra contre 38,3 pour les autres (t = -0,78 ; ddl = 482 ; p = 0,437). En médiane, 34,5 contre 37,1, soit un écart de -2,6 (IC 95 % : -5,6 à 0,9) ; Mann-Whitney p = 0,576. <strong>Verdict : non significatif, H0 conservée.</strong> <strong>Valeur de p :</strong> p = 0,437 veut dire que, si le visage ne changeait rien aux interactions, on obtiendrait un écart au moins aussi grand par pur hasard dans environ 44 cas sur 100 ; comme p est supérieur à 0,05, l'écart est non significatif.</p>
+</li>
+</ul>
+<p><strong>Statistiques de groupe</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Visage en face caméra</th>
+<th style="text-align: left;">N</th>
+<th style="text-align: left;">Moyenne</th>
+<th style="text-align: left;">Écart type</th>
+<th style="text-align: left;">Erreur standard de la moyenne</th>
+<th style="text-align: left;">Médiane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Oui</td>
+<td style="text-align: left;">215</td>
+<td style="text-align: left;">37,08</td>
+<td style="text-align: left;">15,17</td>
+<td style="text-align: left;">1,03</td>
+<td style="text-align: left;">34,54</td>
+</tr>
+<tr>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">269</td>
+<td style="text-align: left;">38,32</td>
+<td style="text-align: left;">18,97</td>
+<td style="text-align: left;">1,16</td>
+<td style="text-align: left;">37,11</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Test des échantillons indépendants</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Hypothèse</th>
+<th style="text-align: left;">t</th>
+<th style="text-align: left;">ddl</th>
+<th style="text-align: left;">p unilatéral</th>
+<th style="text-align: left;">p bilatéral</th>
+<th style="text-align: left;">Différence moyenne</th>
+<th style="text-align: left;">Erreur standard</th>
+<th style="text-align: left;">IC 95 % inférieur</th>
+<th style="text-align: left;">IC 95 % supérieur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Variances égales</strong></td>
+<td style="text-align: left;"><strong>-0,78</strong></td>
+<td style="text-align: left;"><strong>482</strong></td>
+<td style="text-align: left;"><strong>0,782</strong></td>
+<td style="text-align: left;"><strong>0,437</strong></td>
+<td style="text-align: left;"><strong>-1,24</strong></td>
+<td style="text-align: left;"><strong>1,59</strong></td>
+<td style="text-align: left;"><strong>-4,36</strong></td>
+<td style="text-align: left;"><strong>1,89</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Variances inégales</td>
+<td style="text-align: left;">-0,80</td>
+<td style="text-align: left;">482,0</td>
+<td style="text-align: left;">0,787</td>
+<td style="text-align: left;">0,425</td>
+<td style="text-align: left;">-1,24</td>
+<td style="text-align: left;">1,55</td>
+<td style="text-align: left;">-4,29</td>
+<td style="text-align: left;">1,81</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>Interprétation.</strong> Les reels avec un visage en face caméra obtiennent environ 37 interactions pour 1 000 comptes touchés, contre 38 pour les autres : la différence est trop petite pour être distinguée du hasard. Ce test montre un lien, pas une cause (le sujet et la parole peuvent jouer).</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Ne pas choisir un format pour faire réagir sur la seule présence du visage : elle ne change pas les interactions. <strong>Ce qui la ferait changer :</strong> un nouveau test sur les reels à venir donnant p &lt; 0,05.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image4.gif" alt="Interactions avec et sans visage en face caméra" loading="lazy"></figure></div></details><div class="jsec jsec-2"><h4>Montage du réel (post-production)</h4></div><details class="test" id="test-H13"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H13</span><h3>Faut-il mettre une musique de fond sur ses réels ?</h3><span class="pill ok">Significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question de recherche.</strong> Les réels avec musique de fond (n = 301) obtiennent-ils plus de vues et une viralité plus élevée que les réels sans musique (n = 155) ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : la musique n'a pas d'effet, les réels avec et sans musique ont les mêmes vues, la même portée et les mêmes réactions. H1 : ils sont différents sur au moins un KPI. Si p &lt; 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 481 réels publiés du 01/01/2025 au 21/10/2026 ; 456 retenus : 301 avec musique, 155 sans (25 réels « incertain » ou sans son exclus).</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés (avec et sans musique) sur des nombres. Quelques réels très viraux faussent les moyennes : on utilise Mann-Whitney, qui compare les rangs, sur les 9 KPI, puis on corrige les p parce qu'on fait 9 tests. On confirme avec un test t sur le logarithme des vues et un modèle qui compare à format, sujet et durée égaux.</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Mann-Whitney range les 456 réels du moins viral au plus viral, puis regarde si les réels avec musique sont plus souvent en haut du classement que si la musique ne jouait aucun rôle. Sur la viralité, le décalage est très net : <strong>p &lt; 0,0001</strong>, soit moins d'une chance sur 10 000 que ce soit le hasard. Après correction des 9 tests : p corrigée &lt; 0,001.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, la viralité et la portée passent très largement sous le seuil (<strong>p corrigées &lt; 0,001</strong>) : <strong>significatif</strong>. Les abonnés (0,10), le CA (0,24) et les nouvelles clientes (0,40) restent au-dessus, comme l'engagement, les partages et les enregistrements : pas de différence prouvée.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Viralité 1,11 contre 0,74 fois la médiane et portée 1,06 contre 0,80 : +61 % de vues (IC 95 % : +36 % à +91 %), et encore +39 % à format, sujet et durée égaux (p = 0,003). <strong>Verdict : on rejette H0, la musique fait voir le réel par plus de monde.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Médiane avec musique</th>
+<th style="text-align: left;">Médiane sans musique</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Viralité (× médiane)</td>
+<td style="text-align: left;">1,11</td>
+<td style="text-align: left;">0,74</td>
+<td style="text-align: left;">&lt; 0,0001</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Portée (× médiane)</td>
+<td style="text-align: left;">1,06</td>
+<td style="text-align: left;">0,80</td>
+<td style="text-align: left;">&lt; 0,0001</td>
+<td style="text-align: left;">&lt; 0,001</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Abonnés gagnés (× médiane)</td>
+<td style="text-align: left;">1,00</td>
+<td style="text-align: left;">0,76</td>
+<td style="text-align: left;">0,005</td>
+<td style="text-align: left;">0,103</td>
+<td style="text-align: left;">Fragile</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">3,40 %</td>
+<td style="text-align: left;">3,75 %</td>
+<td style="text-align: left;">0,142</td>
+<td style="text-align: left;">0,603</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux de partage</td>
+<td style="text-align: left;">0,02 %</td>
+<td style="text-align: left;">0,02 %</td>
+<td style="text-align: left;">0,784</td>
+<td style="text-align: left;">0,977</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'enregistrement</td>
+<td style="text-align: left;">0,10 %</td>
+<td style="text-align: left;">0,10 %</td>
+<td style="text-align: left;">0,279</td>
+<td style="text-align: left;">0,808</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'abonnement</td>
+<td style="text-align: left;">0,07 %</td>
+<td style="text-align: left;">0,06 %</td>
+<td style="text-align: left;">0,669</td>
+<td style="text-align: left;">0,888</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">CA J + lendemain</td>
+<td style="text-align: left;">333 €</td>
+<td style="text-align: left;">270 €</td>
+<td style="text-align: left;">0,024</td>
+<td style="text-align: left;">0,241</td>
+<td style="text-align: left;">Fragile</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nouvelles clientes J + lendemain</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0,049</td>
+<td style="text-align: left;">0,398</td>
+<td style="text-align: left;">Fragile</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>Interprétation.</strong> En clair, la musique, c'est un coup de pouce de l'algorithme : un réel avec musique est montré à beaucoup plus de monde, environ 60 % de vues en plus. Par contre, les gens qui le voient ne réagissent pas plus : la musique ne rend pas le contenu plus intéressant, elle le rend plus visible. Et c'est surtout vrai quand elle parle : un réel parlé avec musique fait 1,2 fois les vues habituelles, contre 0,7 sans. Concrètement, sur les 86 réels par an publiés sans musique, ça représente environ 380 000 vues gagnées, pour zéro euro.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Concrètement, c'est la décision la plus simple du dossier : mettre systématiquement une musique de fond, en particulier sur les réels où elle parle, soit environ un tiers des réels aujourd'hui.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image24.png" alt="reels_base.csv · 456 réels, janvier 2025 – octobre 2026 (hors réels « incertain » et sans son)" loading="lazy"></figure>
+<p>reels_base.csv · 456 réels, janvier 2025 – octobre 2026 (hors réels « incertain » et sans son)</p></div></details><details class="test" id="test-H14"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H14</span><h3>Faut-il afficher un texte à l&#x27;écran dès l&#x27;accroche de chaque réel ?</h3><span class="pill ok">Significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question marketing.</strong> Faut-il afficher un texte à l'écran dès l'accroche de chaque réel ?</p>
+</li>
+<li>
+<p><strong>Question de recherche.</strong> Les réels qui affichent un texte à l'écran dès les premières secondes (n = 465) obtiennent-ils plus de vues que ceux qui n'en affichent pas (n = 16) ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : le texte au début n'a pas d'effet, les réels avec et sans texte ont les mêmes vues, la même portée et les mêmes réactions. H1 : ils sont différents sur au moins un KPI. Si p &lt; 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 481 réels publiés du 01/01/2025 au 21/10/2026 : 465 avec texte au début, 16 sans.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare deux groupes séparés, de tailles très inégales, sur des nombres : Mann-Whitney, qui compare les rangs, sur les 9 KPI, avec correction des p. On confirme avec un test t sur le logarithme des vues et un modèle qui compare à musique, coulisses, lumière et appel à l'action égaux.</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Mann-Whitney range les 481 réels du moins vu au plus vu, puis regarde si les 16 réels sans texte tombent plus souvent en bas du classement que par hasard. Sur la portée : <strong>p = 0,003</strong>, soit 3 chances sur 1 000 ; sur la viralité : p = 0,002. Après correction des 9 tests : p corrigées = 0,009 et 0,015.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si la p corrigée est sous <strong>0,05</strong>, le résultat est significatif. Ici, la portée (<strong>0,009</strong>) et la viralité (<strong>0,015</strong>) passent sous le seuil : <strong>significatif</strong>. Les réactions (engagement, partages, enregistrements) restent au-dessus : pas de différence prouvée.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Viralité 1,00 contre 0,65 fois la médiane et portée 1,00 contre 0,66 : +88 % de vues avec texte (IC 95 % : +53 % à +130 %), et encore +73 % à autres critères égaux (p corrigée = 0,001). 23 % de réels viraux avec texte, aucun sans. <strong>Verdict : on rejette H0, le texte au début fait voir le réel par plus de monde.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Médiane avec texte</th>
+<th style="text-align: left;">Médiane sans texte</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">p corrigée</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Viralité (× médiane)</td>
+<td style="text-align: left;">1,00</td>
+<td style="text-align: left;">0,65</td>
+<td style="text-align: left;">0,002</td>
+<td style="text-align: left;">0,015</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Portée (× médiane)</td>
+<td style="text-align: left;">1,00</td>
+<td style="text-align: left;">0,66</td>
+<td style="text-align: left;">0,003</td>
+<td style="text-align: left;">0,009</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Abonnés gagnés (× médiane)</td>
+<td style="text-align: left;">1,00</td>
+<td style="text-align: left;">0,71</td>
+<td style="text-align: left;">0,059</td>
+<td style="text-align: left;">0,105</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'engagement</td>
+<td style="text-align: left;">3,60 %</td>
+<td style="text-align: left;">3,60 %</td>
+<td style="text-align: left;">0,548</td>
+<td style="text-align: left;">0,548</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux de partage</td>
+<td style="text-align: left;">0,02 %</td>
+<td style="text-align: left;">0,03 %</td>
+<td style="text-align: left;">0,478</td>
+<td style="text-align: left;">0,615</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'enregistrement</td>
+<td style="text-align: left;">0,10 %</td>
+<td style="text-align: left;">0,11 %</td>
+<td style="text-align: left;">0,486</td>
+<td style="text-align: left;">0,546</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taux d'abonnement</td>
+<td style="text-align: left;">0,06 %</td>
+<td style="text-align: left;">0,05 %</td>
+<td style="text-align: left;">0,200</td>
+<td style="text-align: left;">0,301</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">CA J + lendemain</td>
+<td style="text-align: left;">313 €</td>
+<td style="text-align: left;">550 €</td>
+<td style="text-align: left;">0,007</td>
+<td style="text-align: left;">0,015</td>
+<td style="text-align: left;">Voir limite</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nouvelles clientes J + lendemain</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">0,002</td>
+<td style="text-align: left;">0,007</td>
+<td style="text-align: left;">Voir limite</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Confirmation sur la viralité</th>
+<th style="text-align: left;">Résultat</th>
+<th style="text-align: left;">p corrigée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Test t (logarithme des vues)</td>
+<td style="text-align: left;">+88 % de vues avec texte</td>
+<td style="text-align: left;">&lt; 0,001</td>
+</tr>
+<tr>
+<td style="text-align: left;">À autres critères égaux (musique, coulisses, lumière, appel à l'action)</td>
+<td style="text-align: left;">+73 % de vues avec texte</td>
+<td style="text-align: left;">0,001</td>
+</tr>
+<tr>
+<td style="text-align: left;">Part de réels viraux (au moins 2 fois la médiane)</td>
+<td style="text-align: left;">23 % avec texte, 0 % sans</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>Interprétation.</strong> En clair, le texte au début, c'est ce qui retient la personne qui fait défiler sans le son : sans lui, le réel perd environ un tiers de ses vues, et aucun réel sans texte n'est jamais devenu viral. Bonne nouvelle : elle le fait déjà sur 97 % de ses réels. Attention quand même : le groupe sans texte ne compte que 16 réels, donc l'effet est net mais repose sur peu de cas.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Concrètement, en faire une règle de montage sans exception : chaque réel s'ouvre sur un texte, y compris les présentations de produits et les compilations, qui sont aujourd'hui les seuls réels sans texte. Gain attendu : environ 70 000 vues par an.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image25.png" alt="reels_base.csv · 481 réels, janvier 2025 – octobre 2026" loading="lazy"></figure></div></details><details class="test" id="test-H2"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H2</span><h3>Sous-titrer ses vidéos parlées aide-t-il à toucher plus de monde, qu&#x27;elle parle face caméra ou en voix off ?</h3><span class="pill ok">Significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p>Question marketing. Sous-titrer ses vidéos parlées aide-t-il à toucher plus de monde, qu'elle parle face caméra ou en voix off ?</p>
+</li>
+<li>
+<p>Question de recherche. Les réels sous-titrés (n = 213) ont-ils plus de viralité (vues ÷ médiane des 30 réels publiés autour) que les réels non sous-titrés (n = 152) ?</p>
+</li>
+<li>
+<p>Hypothèse. H0 : en moyenne, les réels sous-titrés ont la même viralité que les réels non sous-titrés ; les sous-titres ne changent rien. H1 : en moyenne, les réels sous-titrés n'ont pas la même viralité que les réels non sous-titrés. Si p &lt; 0,05, on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p>Périmètre. 365 réels publiés du 01/01/2025 au 21/10/2026 : 213 sous-titrés, 152 non sous-titrés. Le critère « sous-titrés » = colonne « Sous-titres » de la base (oui / non). Le périmètre ne garde que les réels où elle parle (au moins 15 mots transcrits). L'indicateur est la viralité (vues ÷ médiane des 30 réels publiés autour). 1,00 = un réel normal ; 2,00 = deux fois plus de vues que d'habitude. Source : reels_base_completee.xlsx (« BDD Nettoyé » de l'équipe, 487 réels du 01/01/2025 au 21/10/2026). Exclus : 122 réels où elle ne parle pas (moins de 15 mots transcrits).</p>
+</li>
+<li>
+<p>Test choisi. 213 réels sous-titrés contre 152 réels non sous-titrés : deux groupes indépendants et une variable quantitative (viralité, passée au logarithme car très asymétrique : asymétrie = 9,97), donc test t pour échantillons indépendants. Levene : F = 1,02 ; p = 0,314 → variances égales, ligne « variances égales » retenue. Résultat confirmé par le test de Mann-Whitney, car la distribution reste asymétrique après le logarithme (asymétrie = 1,54 ; aplatissement = 2,45) : ce test ne suppose aucune forme de distribution.</p>
+</li>
+<li>
+<p>Le résultat. 0,42 en moyenne pour les réels sous-titrés contre 0,13 pour les réels non sous-titrés, en ln de la viralité, soit 1,53 contre 1,14 à l'échelle d'origine (t = 2,62 ; ddl = 363 ; p = 0,009). En médiane, 1,09 contre 0,85, soit 0,24 (IC 95 % : 0,05 à 0,47) ; Mann-Whitney p &lt; 0,001. Verdict : significatif, H1 validée.</p>
+</li>
+</ul>
+<p>Statistiques de groupe (ln de la viralité)</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Sous-titres</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Moyenne</th>
+<th style="text-align: right;">Écart type</th>
+<th style="text-align: right;">Erreur standard de la moyenne</th>
+<th style="text-align: right;">Médiane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oui</td>
+<td style="text-align: right;">213</td>
+<td style="text-align: right;">0,42</td>
+<td style="text-align: right;">1,08</td>
+<td style="text-align: right;">0,074</td>
+<td style="text-align: right;">0,09</td>
+</tr>
+<tr>
+<td>Non</td>
+<td style="text-align: right;">152</td>
+<td style="text-align: right;">0,13</td>
+<td style="text-align: right;">1,02</td>
+<td style="text-align: right;">0,083</td>
+<td style="text-align: right;">−0,17</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test des échantillons indépendants (ln de la viralité)</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Hypothèse</th>
+<th style="text-align: right;">t</th>
+<th style="text-align: right;">ddl</th>
+<th style="text-align: right;">p unilatéral</th>
+<th style="text-align: right;">p bilatéral</th>
+<th style="text-align: right;">Différence moyenne</th>
+<th style="text-align: right;">Erreur standard</th>
+<th style="text-align: right;">IC 95 % inférieur</th>
+<th style="text-align: right;">IC 95 % supérieur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hypothèse de variances égales</td>
+<td style="text-align: right;">2,615</td>
+<td style="text-align: right;">363</td>
+<td style="text-align: right;">0,005</td>
+<td style="text-align: right;">0,009</td>
+<td style="text-align: right;">0,293</td>
+<td style="text-align: right;">0,112</td>
+<td style="text-align: right;">0,073</td>
+<td style="text-align: right;">0,513</td>
+</tr>
+<tr>
+<td>Hypothèse de variances inégales</td>
+<td style="text-align: right;">2,637</td>
+<td style="text-align: right;">334,78</td>
+<td style="text-align: right;">0,004</td>
+<td style="text-align: right;">0,009</td>
+<td style="text-align: right;">0,293</td>
+<td style="text-align: right;">0,111</td>
+<td style="text-align: right;">0,074</td>
+<td style="text-align: right;">0,511</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p>Interprétation. Les réels sous-titrés ont une viralité médiane de 1,09 contre 0,85 pour les réels non sous-titrés (1,00 = un réel normal), soit 29 % de plus.</p>
+</li>
+<li>
+<p>Décision. Sous-titrer systématiquement les réels où elle parle, dès la prochaine publication. Ce qui la ferait changer : un test refait sur les réels publiés après le 21/10/2026 qui donnerait p ≥ 0,05 ou un écart de sens opposé.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image6.png" alt="H2" loading="lazy"></figure>
+<p>La valeur de p (p = 0,009) est la probabilité d'observer un écart au moins aussi grand que celui-ci si les sous-titres ne changeaient rien ; sous 0,05, on juge l'écart trop grand pour être dû au hasard.</p>
+<p>C'est significatif.</p></div></details><details class="test" id="test-H4"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H4</span><h3>Demander de commenter, de partager ou de s&#x27;abonner à l&#x27;oral, dans une vidéo sous-titrée, fait-il réagir davantage le public ?</h3><span class="pill no">Non significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p>Question marketing. Demander de commenter, de partager ou de s'abonner à l'oral, dans une vidéo sous-titrée, fait-il réagir davantage le public ?</p>
+</li>
+<li>
+<p>Question de recherche. Les réels qui demandent un geste à l'oral (commenter, partager, s'abonner…) et sont sous-titrés (n = 31) ont-ils plus d'interactions (commentaires + partages pour 1 000 comptes touchés) que les réels sans aucun appel à l'action (n = 376) ?</p>
+</li>
+<li>
+<p>Hypothèse. H0 : en moyenne, les réels qui demandent un geste à l'oral (commenter, partager, s'abonner…) et sont sous-titrés ont les mêmes interactions que les réels sans aucun appel à l'action ; la demande d'un geste à l'oral dans un réel sous-titré ne change rien. H1 : en moyenne, les réels qui demandent un geste à l'oral (commenter, partager, s'abonner…) et sont sous-titrés n'ont pas les mêmes interactions que les réels sans aucun appel à l'action. Si p &lt; 0,05, on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p>Périmètre. 407 réels publiés du 03/01/2025 au 20/10/2026 : 31 avec appel oral sous-titré, 376 sans appel. Le critère « demande d'un geste à l'oral, réel sous-titré » = un appel à l'action à l'oral qui demande de commenter, partager, s'abonner, enregistrer ou identifier, sans renvoi vers le site (ni à l'oral ni en légende), dans un réel qui a des sous-titres. Le groupe de comparaison = réels sans aucun appel à l'action, ni écrit ni oral. L'indicateur est le nombre d'interactions (commentaires + partages pour 1 000 comptes touchés). Source : reels_base_completee.xlsx (« BDD Nettoyé » de l'équipe, 487 réels du 01/01/2025 au 21/10/2026). Exclus : 4 réels sans appel à l'action en légende dont l'appel oral est vide dans la base. Exclus : 39 réels dont un appel renvoie vers le site (hors des deux groupes). Exclus : 37 réels avec un autre appel à l'action (un appel à l'oral sans sous-titres, ou un appel seulement en légende), hors des deux groupes.</p>
+</li>
+<li>
+<p>Test choisi. 31 réels avec appel oral sous-titré contre 376 réels sans appel : deux groupes indépendants et une variable quantitative (interactions, passée au logarithme car très asymétrique : asymétrie = 3,13 ; ln(1 + x) car 2 réels n'ont aucune interaction), donc test t pour échantillons indépendants. Levene : F = 4,26 ; p = 0,040 → variances inégales, ligne « variances inégales » (Welch) retenue. Résultat confirmé par le test de Mann-Whitney, car la distribution était très asymétrique avant le logarithme (asymétrie = 3,13) : ce test ne suppose aucune forme de distribution.</p>
+</li>
+<li>
+<p>Le résultat. 1,50 en moyenne pour les réels qui demandent un geste à l'oral (commenter, partager, s'abonner…) et sont sous-titrés contre 1,26 pour les réels sans aucun appel à l'action, en ln(1 + interactions), soit 3,48 contre 2,53 à l'échelle d'origine (t = 1,57 ; ddl = 32,94 ; p = 0,125). En médiane, 3,30 contre 2,34, soit 0,96 (IC 95 % : −0,39 à 3,35) ; Mann-Whitney p = 0,143. Verdict : non significatif, H0 conservée.</p>
+</li>
+</ul>
+<p>Statistiques de groupe (ln(1 + interactions))</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Demande d'un geste à l'oral (réel sous-titré)</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Moyenne</th>
+<th style="text-align: right;">Écart type</th>
+<th style="text-align: right;">Erreur standard de la moyenne</th>
+<th style="text-align: right;">Médiane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oui</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">1,50</td>
+<td style="text-align: right;">0,82</td>
+<td style="text-align: right;">0,148</td>
+<td style="text-align: right;">1,46</td>
+</tr>
+<tr>
+<td>Non</td>
+<td style="text-align: right;">376</td>
+<td style="text-align: right;">1,26</td>
+<td style="text-align: right;">0,63</td>
+<td style="text-align: right;">0,032</td>
+<td style="text-align: right;">1,21</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test des échantillons indépendants (ln(1 + interactions))</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Hypothèse</th>
+<th style="text-align: right;">t</th>
+<th style="text-align: right;">ddl</th>
+<th>p unilatéral</th>
+<th>p bilatéral</th>
+<th style="text-align: right;">Différence moyenne</th>
+<th style="text-align: right;">Erreur standard</th>
+<th style="text-align: right;">IC 95 % inférieur</th>
+<th style="text-align: right;">IC 95 % supérieur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hypothèse de variances égales</td>
+<td style="text-align: right;">1,978</td>
+<td style="text-align: right;">405</td>
+<td>0,024</td>
+<td>0,049</td>
+<td style="text-align: right;">0,238</td>
+<td style="text-align: right;">0,121</td>
+<td style="text-align: right;">0,001</td>
+<td style="text-align: right;">0,476</td>
+</tr>
+<tr>
+<td>Hypothèse de variances inégales</td>
+<td style="text-align: right;">1,573</td>
+<td style="text-align: right;">32,94</td>
+<td>0,063</td>
+<td>0,125</td>
+<td style="text-align: right;">0,238</td>
+<td style="text-align: right;">0,152</td>
+<td style="text-align: right;">−0,070</td>
+<td style="text-align: right;">0,547</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p>Interprétation. Les réels qui demandent un geste à l'oral (commenter, partager, s'abonner…) et sont sous-titrés obtiennent en médiane 3,30 interactions pour 1 000 comptes touchés contre 2,34 pour les réels sans aucun appel à l'action, soit 41 % de plus, mais cet écart reste compatible avec le hasard : on ne peut pas affirmer que la demande d'un geste à l'oral dans un réel sous-titré change les interactions.</p>
+</li>
+<li>
+<p>Décision. Ne pas compter sur une demande de geste à l'oral dans un réel sous-titré pour faire réagir davantage : un effet n'est pas démontré. Ce qui la ferait changer : un test refait sur les réels publiés après le 21/10/2026 qui donnerait p &lt; 0,05.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image8.png" alt="" loading="lazy"></figure>
+<p>La valeur de p (p = 0,125) est la probabilité d'observer un écart au moins aussi grand que celui-ci si la demande d'un geste à l'oral dans un réel sous-titré ne changeait rien ; sous 0,05, on juge l'écart trop grand pour être dû au hasard.</p>
+<p>Ce n'est pas significatif.</p></div></details><details class="test" id="test-H6"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H6</span><h3>Faut-il faire des reels plus longs pour avoir plus de vues ?</h3><span class="pill no">Non significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question marketing.</strong> Faut-il faire des reels plus longs pour avoir plus de vues ?</p>
+</li>
+<li>
+<p><strong>Question de recherche.</strong> Les reels longs (n = 243) ont-ils plus de vues que les reels courts (n = 244) ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : en moyenne, les reels longs ont le même nombre de vues que les reels courts ; la durée ne change rien. H1 : en moyenne, les reels longs n'ont pas le même nombre de vues que les reels courts. Si p &lt; 0,05, on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 487 reels publiés du 01/01/2025 au 21/10/2026 : 243 longs, 244 courts. Un reel est long si sa durée dépasse la médiane de l'ensemble (37,7 s), court sinon. Source : reels_base_completee.xlsx (colonnes « Durée (secondes) » et « Vues »). Aucun reel exclu ; la durée, écrite avec une virgule comme du texte, a été convertie en vrai nombre pour pouvoir calculer. La base des ventes n'intervient pas : H6 porte sur les vues.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> 243 reels longs contre 244 reels courts : deux groupes indépendants et une variable quantitative (vues), donc test t pour échantillons indépendants. Levene : F = 0,37 ; p = 0,544 → variances égales, ligne « variances égales » retenue. Résultat confirmé par Mann-Whitney, car les vues sont très asymétriques (quelques reels viraux, jusqu'à 2 642 301 vues) : la moyenne est fragile, le test de rang non.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><em>Le test t (le plus simple pour comparer deux tas) compare la moyenne des deux tas. « Indépendants » veut dire qu'une vidéo est dans un seul tas, jamais dans les deux. Pourquoi lui : on compare exactement deux tas, et les vues sont des nombres. Un test plus compliqué ne serait utile que s'il y avait plus de deux tas.</em></p>
+</li>
+<li>
+<p><em>Levene n'est pas un test de plus pour la conclusion : c'est une petite vérification obligatoire avant de lire le test t. Il regarde si, dans les deux tas, les vidéos sont aussi « étalées » (certaines toutes petites, d'autres énormes). Oui (p = 0,544, plus grand que 0,05), donc on lit la ligne « variances égales », la plus simple.</em></p>
+</li>
+<li>
+<p><em>Mann-Whitney est le seul test plus compliqué qu'on ajoute, et on a une bonne raison : les vues sont très inégales (une vidéo à 2,6 millions, la plupart autour de 15 000). Quelques vidéos géantes peuvent fausser une moyenne, comme un seul enfant très grand fausse la taille moyenne d'un groupe. Mann-Whitney met les vidéos en rang et regarde de quel tas viennent les premières : une vidéo à 2,6 millions ne gagne qu'une place de plus qu'une à 100 000. Il sert de deuxième avis.</em></p>
+</li>
+</ol>
+<p><em>Peut-on se fier au résultat ? Oui : 243 et 244 vidéos par tas (assez), chaque vidéo dans un seul tas, et les deux arbitres disent la même chose. On n'a pas ajouté d'autre test : il n'y en avait pas besoin.</em></p>
+<ul>
+<li><strong>Le résultat.</strong> 51 565 vues en moyenne pour les reels longs contre 46 792 pour les reels courts (t = 0,33 ; ddl = 485 ; p = 0,744). En médiane, 15 198 contre 15 418, soit un écart de -220 vues (IC 95 % : -2 343 à 2 360) ; Mann-Whitney p = 0,678. <strong>Verdict : non significatif, H0 conservée.</strong> <strong>Valeur de p :</strong> p = 0,744 veut dire que, si la durée ne changeait rien, on obtiendrait un écart au moins aussi grand par pur hasard dans environ 74 cas sur 100 ; comme p dépasse 0,05, l'écart n'est pas significatif.</li>
+</ul>
+<p><strong>Statistiques de groupe</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Reel long</th>
+<th style="text-align: left;">N</th>
+<th style="text-align: left;">Moyenne</th>
+<th style="text-align: left;">Écart type</th>
+<th style="text-align: left;">Erreur standard de la moyenne</th>
+<th style="text-align: left;">Médiane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Oui</td>
+<td style="text-align: left;">243</td>
+<td style="text-align: left;">51 565</td>
+<td style="text-align: left;">135 929</td>
+<td style="text-align: left;">8 720</td>
+<td style="text-align: left;">15 198</td>
+</tr>
+<tr>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">244</td>
+<td style="text-align: left;">46 792</td>
+<td style="text-align: left;">182 424</td>
+<td style="text-align: left;">11 678</td>
+<td style="text-align: left;">15 418</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Test des échantillons indépendants</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Hypothèse</th>
+<th style="text-align: left;">t</th>
+<th style="text-align: left;">ddl</th>
+<th style="text-align: left;">p unilatéral</th>
+<th style="text-align: left;">p bilatéral</th>
+<th style="text-align: left;">Différence moyenne</th>
+<th style="text-align: left;">Erreur standard</th>
+<th style="text-align: left;">IC 95 % inférieur</th>
+<th style="text-align: left;">IC 95 % supérieur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Variances égales</strong></td>
+<td style="text-align: left;"><strong>0,33</strong></td>
+<td style="text-align: left;"><strong>485</strong></td>
+<td style="text-align: left;"><strong>0,372</strong></td>
+<td style="text-align: left;"><strong>0,744</strong></td>
+<td style="text-align: left;"><strong>4 773</strong></td>
+<td style="text-align: left;"><strong>14 583</strong></td>
+<td style="text-align: left;"><strong>-23 881</strong></td>
+<td style="text-align: left;"><strong>33 427</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Variances inégales</td>
+<td style="text-align: left;">0,33</td>
+<td style="text-align: left;">449,3</td>
+<td style="text-align: left;">0,372</td>
+<td style="text-align: left;">0,743</td>
+<td style="text-align: left;">4 773</td>
+<td style="text-align: left;">14 575</td>
+<td style="text-align: left;">-23 870</td>
+<td style="text-align: left;">33 416</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>Interprétation.</strong> Un reel fait environ 15 400 vues (médiane), qu'il soit long ou court : l'écart de médiane (220 vues) ne représente que 1,4 % de ce chiffre. Les 4 773 vues de moyenne en plus pour les reels longs viennent de quelques reels viraux et ne sont pas fiables.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Ne pas allonger les reels dans l'espoir d'obtenir plus de vues, à partir des prochaines publications. <strong>Ce qui la ferait changer :</strong> un nouveau test sur les reels à venir où les reels longs auraient une médiane de vues significativement supérieure (p &lt; 0,05).</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image1.gif" alt="Reels longs et courts : médiane de 15 198 contre 15 418 vues, écart non significatif. Source : reels_base_completee, 487 reels du 01/01/2025 au 21/10/2026" loading="lazy"></figure></div></details><div class="jsec jsec-2"><h4>Diffusion du réel</h4></div><details class="test" id="test-H15"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H15</span><h3>Fréquence de publication : Faut-il publier plus de réels pour gagner plus de vues, d&#x27;abonnés et d&#x27;engagement ?</h3><span class="pill warn">Significatif en partie</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question de recherche.</strong> Quand elle publie plus de réels dans une semaine, gagne-t-elle plus de vues, plus d'abonnés et/ou plus d'engagement, sur la semaine et par réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : le nombre de réels publiés dans la semaine n'est lié ni aux vues, ni aux abonnés, ni au taux d'engagement. H1 : il est lié à au moins un de ces KPI. Si p &lt; 0,05, le lien n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 94 semaines, de janvier 2025 à octobre 2026 ; 481 réels ; 5 réels par semaine en médiane (de 1 à 9). Semaines classées en 5 groupes : 3 réels ou moins (12 semaines), 4 (19), 5 (27), 6 (22), 7 ou plus (14). Base complète : abonnés des 32 réels de septembre-octobre 2026 complétés par l'export Instagram.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> Deux niveaux d'analyse pour chaque KPI. <strong>Sur la semaine</strong> : on cherche un lien entre deux nombres (réels publiés, total de la semaine), donc une corrélation de Pearson, confirmée par Spearman. <strong>Par réel</strong> : on compare les réels des 5 groupes de semaines, donc Kruskal-Wallis (plus de deux groupes, KPI asymétriques), et une corrélation de Spearman pour voir si la baisse est régulière.</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> La corrélation r va de −1 (plus elle publie, moins elle gagne) à +1 (plus elle publie, plus elle gagne) ; 0 = aucun lien. Sur la semaine : vues r = 0,15 (<strong>p = 0,16</strong>), abonnés r = 0,04 (<strong>p = 0,71</strong>), engagement r = −0,02 (<strong>p = 0,86</strong>) : dans les trois cas, plus de 15 chances sur 100 que le petit lien observé soit dû au hasard. Par réel : abonnés <strong>p = 0,003</strong> (Kruskal-Wallis), soit 3 chances sur 1 000, avec une baisse régulière (Spearman p &lt; 0,001) ; vues p = 0,016 mais sans tendance régulière (Spearman p = 0,10) ; engagement p = 0,10.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si p est sous <strong>0,05</strong>, le résultat est significatif. Sur la semaine, aucun KPI ne passe : publier plus ne fait gagner <strong>ni plus de vues, ni plus d'abonnés, ni plus d'engagement</strong> (non significatif). Par réel, seuls les abonnés passent nettement (<strong>0,003</strong>) : <strong>significatif</strong>, chaque réel rapporte moins d'abonnés. Pour les vues par réel, les groupes diffèrent (p = 0,016) mais dans le désordre, sans lien avec le rythme de publication : pas d'effet de la fréquence.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong></p>
+</li>
+<li>
+<p>Vues de la semaine : 68 000 (3 réels ou moins), 210 000 (4), 87 000 (5), 138 000 (6), 128 000 (7 ou plus). <strong>Aucun lien.</strong></p>
+</li>
+<li>
+<p>Abonnés de la semaine : 49, 192, 52, 80, 49. <strong>Aucun lien.</strong></p>
+</li>
+<li>
+<p>Engagement : 4,0 %, 3,9 %, 3,4 %, 3,6 %, 3,6 % sur la semaine ; entre 3,3 % et 4,1 % par réel. <strong>Aucun lien.</strong></p>
+</li>
+<li>
+<p>Abonnés par réel : 12, 8, 7, 6 puis 4,5. <strong>Significatif, baisse régulière.</strong></p>
+</li>
+<li>
+<p><strong>Verdict : on ne rejette pas H0 pour les vues, l'engagement et les abonnés de la semaine ; on la rejette pour les abonnés par réel.</strong></p>
+</li>
+<li>
+<p><strong>Interprétation.</strong> En clair, publier plus ne rapporte rien de plus : qu'elle publie 3 ou 7 réels dans la semaine, elle fait à peu près autant de vues, gagne à peu près autant d'abonnés et garde le même taux d'engagement. Le volume de la semaine se répartit simplement sur plus de réels : chaque réel rapporte donc moins d'abonnés, 12 les semaines calmes contre 4 à 5 les semaines chargées. C'est le signe d'une <strong>saturation de l'audience</strong> : les abonnés et l'algorithme ne consomment pas plus de contenu parce qu'elle en produit plus. Réserve : c'est une corrélation, pas une preuve de cause à effet.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Concrètement, publier moins mais mieux : passer d'environ 6 à 4 réels par semaine, soit une centaine de réels en moins par an, sans perte de vues, d'abonnés ni d'engagement attendue. Le temps de production libéré sert à soigner chaque réel : musique, texte d'accroche, thèmes qui recrutent, créneau du matin ou de midi. On le valide sur 8 semaines à 4 réels, en suivant les trois KPI.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image26.png" alt="reels_base.csv · 94 semaines, janvier 2025 – octobre 2026" loading="lazy"></figure>
+<p>reels_base.csv · 94 semaines, janvier 2025 – octobre 2026</p></div></details><details class="test" id="test-H16"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H16</span><h3>À quelle heure publier ses réels ?</h3><span class="pill ok">Significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question de recherche.</strong> Les réels publiés le matin, à midi, l'après-midi ou le soir obtiennent-ils un nombre de vues différent ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : l'heure ne change rien, les 4 créneaux font autant de vues. H1 : au moins un créneau fait plus ou moins de vues. Si p &lt; 0,05, l'écart n'est pas dû au hasard : on rejette H0.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Les 481 réels, répartis dans les 4 créneaux.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> On compare plus de deux groupes (4 créneaux) sur un nombre, avec quelques réels très viraux qui faussent les moyennes : Kruskal-Wallis, l'équivalent de Mann-Whitney pour plusieurs groupes. Comme il trouve un écart, on compare ensuite les créneaux deux à deux (Mann-Whitney), en corrigeant les p car cela fait 6 comparaisons.</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Kruskal-Wallis range les 481 réels du moins vu au plus vu, puis regarde si certains créneaux se retrouvent plus souvent en haut ou en bas du classement que si l'heure ne jouait aucun rôle. Résultat : H = 10,2 ; <strong>p = 0,017</strong>, soit environ 2 chances sur 100 que ce soit le hasard. Deux à deux : matin contre soir p = 0,006 et midi contre soir p = 0,005, soit <strong>p corrigée = 0,017</strong> pour les deux. Les autres paires ne diffèrent pas.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si p est sous <strong>0,05</strong>, le résultat est significatif. Ici, p = <strong>0,017</strong> : <strong>significatif</strong>. Les comparaisons deux à deux montrent d'où vient l'écart : le matin et le midi font significativement plus de vues que le soir.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Vues d'un réel typique : 17 174 le matin, 16 286 à midi, 13 292 l'après-midi, 12 357 le soir, soit +39 % le matin et +32 % à midi par rapport au soir. <strong>Verdict : on rejette H0, le matin et le midi font plus de vues que le soir.</strong></p>
+</li>
+<li>
+<p><strong>Interprétation.</strong> En clair, un réel publié le matin ou à midi génère environ un tiers de reach en plus qu'un réel publié le soir : autour de 17 000 et 16 000 vues, contre 12 000. L'explication la plus probable tient au fonctionnement de l'algorithme des Reels : un réel est d'abord poussé auprès d'un premier échantillon d'abonnés et de non-abonnés, et ses <strong>signaux précoces</strong> (watch time, taux de complétion, partages, enregistrements dans les premières heures) décident s'il est ensuite diffusé plus largement dans l'onglet Reels et l'Explorer. Publié le matin ou à midi, au moment des <strong>pics d'activité</strong> de l'audience (trajet, pause déjeuner), le réel accumule ces signaux vite et dispose de toute la journée pour être redistribué. Le soir, il arrive dans un fil plus saturé et sa fenêtre de diffusion initiale est coupée par la nuit. Elle publie déjà 7 réels sur 10 sur ces créneaux. Réserve : c'est une corrélation, les réels du soir peuvent aussi être des contenus différents.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Concrètement, continuer à publier sur les deux créneaux qui marchent déjà : <strong>vers 8 h, avant le travail</strong>, et <strong>à la pause de midi</strong>. Ce sont les moments où l'audience fait défiler Instagram (trajet, pause déjeuner) : le réel accumule vite ses signaux précoces et a toute la journée pour être rediffusé.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image27.png" alt="reels_base.csv · 481 réels, janvier 2025 – octobre 2026, classés par heure de publication" loading="lazy"></figure>
+<p>reels_base.csv · 481 réels, janvier 2025 – octobre 2026, classés par heure de publication</p></div></details><details class="test" id="test-H1"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H1</span><h3>Écrire l&#x27;adresse du site ou un lien dans la légende freine-t-il la diffusion de la vidéo ?</h3><span class="pill ok">Significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p>Question marketing. Écrire l'adresse du site ou un lien dans la légende freine-t-il la diffusion de la vidéo ?</p>
+</li>
+<li>
+<p>Question de recherche. Les réels avec un lien vers le site dans la légende (n = 34) ont-ils moins de viralité (vues ÷ médiane des 30 réels publiés autour) que les réels sans lien vers le site dans la légende (n = 453) ?</p>
+</li>
+<li>
+<p>Hypothèse. H0 : en moyenne, les réels avec un lien vers le site dans la légende ont la même viralité que les réels sans lien vers le site dans la légende ; le lien vers le site dans la légende ne change rien. H1 : en moyenne, les réels avec un lien vers le site dans la légende n'ont pas la même viralité que les réels sans lien vers le site dans la légende. Si p &lt; 0,05, on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p>Périmètre. 487 réels publiés du 01/01/2025 au 21/10/2026 : 34 avec lien, 453 sans lien. Le critère « lien vers le site » = la légende contient « lumineva.shop », « lien », « site », « bio » ou « boutique » dans les mots trouvés de l'appel à l'action en description. Le groupe de comparaison = tous les autres réels de la base (sans lien vers le site dans la légende). L'indicateur est la viralité (vues ÷ médiane des 30 réels publiés autour). 1,00 = un réel normal ; 2,00 = deux fois plus de vues que d'habitude. Source : reels_base_completee.xlsx (« BDD Nettoyé » de l'équipe, 487 réels du 01/01/2025 au 21/10/2026). Aucun réel exclu : les 487 réels de la base sont répartis entre les deux groupes.</p>
+</li>
+<li>
+<p>Test choisi. 34 réels avec lien contre 453 réels sans lien : deux groupes indépendants et une variable quantitative (viralité, passée au logarithme car très asymétrique : asymétrie = 11,04), donc test t pour échantillons indépendants. Levene : F = 6,22 ; p = 0,013 → variances inégales, ligne « variances inégales » (Welch) retenue. Résultat confirmé par le test de Mann-Whitney, car la distribution reste asymétrique après le logarithme (asymétrie = 1,56 ; aplatissement = 2,70) : ce test ne suppose aucune forme de distribution.</p>
+</li>
+<li>
+<p>Le résultat. −0,07 en moyenne pour les réels avec un lien vers le site dans la légende contre 0,30 pour les réels sans lien vers le site dans la légende, en ln de la viralité, soit 0,94 contre 1,34 à l'échelle d'origine (t = −3,01 ; ddl = 46,70 ; p = 0,004). En médiane, 0,77 contre 1,01, soit −0,25 (IC 95 % : −0,38 à −0,03) ; Mann-Whitney p = 0,037. Verdict : significatif, H1 validée.</p>
+</li>
+</ul>
+<p>Statistiques de groupe (ln de la viralité)</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Lien du site dans la légende</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Moyenne</th>
+<th style="text-align: right;">Écart type</th>
+<th style="text-align: right;">Erreur standard de la moyenne</th>
+<th style="text-align: right;">Médiane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oui</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">−0,07</td>
+<td style="text-align: right;">0,64</td>
+<td style="text-align: right;">0,110</td>
+<td style="text-align: right;">−0,27</td>
+</tr>
+<tr>
+<td>Non</td>
+<td style="text-align: right;">453</td>
+<td style="text-align: right;">0,30</td>
+<td style="text-align: right;">1,03</td>
+<td style="text-align: right;">0,048</td>
+<td style="text-align: right;">0,01</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test des échantillons indépendants (ln de la viralité)</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Hypothèse</th>
+<th style="text-align: right;">t</th>
+<th style="text-align: right;">ddl</th>
+<th style="text-align: right;">p unilatéral</th>
+<th style="text-align: right;">p bilatéral</th>
+<th style="text-align: right;">Différence moyenne</th>
+<th style="text-align: right;">Erreur standard</th>
+<th style="text-align: right;">IC 95 % inférieur</th>
+<th style="text-align: right;">IC 95 % supérieur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hypothèse de variances égales</td>
+<td style="text-align: right;">−2,025</td>
+<td style="text-align: right;">485</td>
+<td style="text-align: right;">0,022</td>
+<td style="text-align: right;">0,043</td>
+<td style="text-align: right;">−0,363</td>
+<td style="text-align: right;">0,179</td>
+<td style="text-align: right;">−0,714</td>
+<td style="text-align: right;">−0,011</td>
+</tr>
+<tr>
+<td>Hypothèse de variances inégales</td>
+<td style="text-align: right;">−3,007</td>
+<td style="text-align: right;">46,70</td>
+<td style="text-align: right;">0,002</td>
+<td style="text-align: right;">0,004</td>
+<td style="text-align: right;">−0,363</td>
+<td style="text-align: right;">0,121</td>
+<td style="text-align: right;">−0,605</td>
+<td style="text-align: right;">−0,120</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p>Interprétation. Les réels avec un lien vers le site dans la légende ont une viralité médiane de 0,77 contre 1,01 pour les réels sans lien vers le site dans la légende (1,00 = un réel normal), soit 24 % de moins.</p>
+</li>
+<li>
+<p>Décision. Retirer l'adresse du site de la légende des réels, dès la prochaine publication. Ce qui la ferait changer : un test refait sur les réels publiés après le 21/10/2026 qui donnerait p ≥ 0,05 ou un écart de sens opposé.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image5.png" alt="H1" loading="lazy"></figure>
+<p>La valeur de p (p = 0,004) est la probabilité d'observer un écart au moins aussi grand que celui-ci si le lien vers le site dans la légende ne changeait rien ; sous 0,05, on juge l'écart trop grand pour être dû au hasard.</p>
+<p>C'est significatif.</p></div></details><details class="test" id="test-H5"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H5</span><h3>Demander de commenter, de partager ou de s&#x27;abonner dans la légende fait-il réagir davantage le public ?</h3><span class="pill ok">Significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p>Question marketing. Demander de commenter, de partager ou de s'abonner dans la légende fait-il réagir davantage le public ?</p>
+</li>
+<li>
+<p>Question de recherche. Les réels qui demandent un geste dans la légende (commenter, partager, s'abonner…) (n = 40) ont-ils plus d'interactions (commentaires + partages pour 1 000 comptes touchés) que les réels sans aucun appel à l'action (n = 376) ?</p>
+</li>
+<li>
+<p>Hypothèse. H0 : en moyenne, les réels qui demandent un geste dans la légende (commenter, partager, s'abonner…) ont les mêmes interactions que les réels sans aucun appel à l'action ; la demande d'un geste dans la légende ne change rien. H1 : en moyenne, les réels qui demandent un geste dans la légende (commenter, partager, s'abonner…) n'ont pas les mêmes interactions que les réels sans aucun appel à l'action. Si p &lt; 0,05, on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p>Périmètre. 416 réels publiés du 03/01/2025 au 20/10/2026 : 40 avec appel en légende, 376 sans appel. Le critère « demande d'un geste en légende » = un appel à l'action dans la légende qui demande de commenter, partager, s'abonner, enregistrer ou identifier, sans renvoi vers le site (ni en légende ni à l'oral). Le groupe de comparaison = réels sans aucun appel à l'action, ni écrit ni oral. L'indicateur est le nombre d'interactions (commentaires + partages pour 1 000 comptes touchés). Source : reels_base_completee.xlsx (« BDD Nettoyé » de l'équipe, 487 réels du 01/01/2025 au 21/10/2026). Exclus : 4 réels sans appel à l'action en légende dont l'appel oral est vide dans la base. Exclus : 39 réels dont un appel renvoie vers le site (hors des deux groupes). Exclus : 28 réels avec un autre appel à l'action (un appel seulement à l'oral), hors des deux groupes.</p>
+</li>
+<li>
+<p>Test choisi. 40 réels avec appel en légende contre 376 réels sans appel : deux groupes indépendants et une variable quantitative (interactions, passée au logarithme car très asymétrique : asymétrie = 2,24 ; ln(1 + x) car 2 réels n'ont aucune interaction), donc test t pour échantillons indépendants. Levene : F = 0,22 ; p = 0,637 → variances égales, ligne « variances égales » retenue. Résultat confirmé par le test de Mann-Whitney, car la distribution était très asymétrique avant le logarithme (asymétrie = 2,24) : ce test ne suppose aucune forme de distribution.</p>
+</li>
+<li>
+<p>Le résultat. 1,68 en moyenne pour les réels qui demandent un geste dans la légende (commenter, partager, s'abonner…) contre 1,26 pour les réels sans aucun appel à l'action, en ln(1 + interactions), soit 4,36 contre 2,53 à l'échelle d'origine (t = 4,00 ; ddl = 414 ; p &lt; 0,001). En médiane, 4,48 contre 2,34, soit 2,14 (IC 95 % : 0,78 à 3,76) ; Mann-Whitney p &lt; 0,001. Verdict : significatif, H1 validée.</p>
+</li>
+</ul>
+<p>Statistiques de groupe (ln(1 + interactions))</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Demande d'un geste dans la légende</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Moyenne</th>
+<th style="text-align: right;">Écart type</th>
+<th style="text-align: right;">Erreur standard de la moyenne</th>
+<th style="text-align: right;">Médiane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oui</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">1,68</td>
+<td style="text-align: right;">0,61</td>
+<td style="text-align: right;">0,096</td>
+<td style="text-align: right;">1,70</td>
+</tr>
+<tr>
+<td>Non</td>
+<td style="text-align: right;">376</td>
+<td style="text-align: right;">1,26</td>
+<td style="text-align: right;">0,63</td>
+<td style="text-align: right;">0,032</td>
+<td style="text-align: right;">1,21</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test des échantillons indépendants (ln(1 + interactions))</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Hypothèse</th>
+<th style="text-align: right;">t</th>
+<th style="text-align: right;">ddl</th>
+<th>p unilatéral</th>
+<th>p bilatéral</th>
+<th style="text-align: right;">Différence moyenne</th>
+<th style="text-align: right;">Erreur standard</th>
+<th style="text-align: right;">IC 95 % inférieur</th>
+<th style="text-align: right;">IC 95 % supérieur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hypothèse de variances égales</td>
+<td style="text-align: right;">3,997</td>
+<td style="text-align: right;">414</td>
+<td>&lt; 0,001</td>
+<td>&lt; 0,001</td>
+<td style="text-align: right;">0,417</td>
+<td style="text-align: right;">0,104</td>
+<td style="text-align: right;">0,212</td>
+<td style="text-align: right;">0,622</td>
+</tr>
+<tr>
+<td>Hypothèse de variances inégales</td>
+<td style="text-align: right;">4,096</td>
+<td style="text-align: right;">48,25</td>
+<td>&lt; 0,001</td>
+<td>&lt; 0,001</td>
+<td style="text-align: right;">0,417</td>
+<td style="text-align: right;">0,102</td>
+<td style="text-align: right;">0,212</td>
+<td style="text-align: right;">0,621</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p>Interprétation. Les réels qui demandent un geste dans la légende (commenter, partager, s'abonner…) obtiennent en médiane 4,48 interactions pour 1 000 comptes touchés contre 2,34 pour les réels sans aucun appel à l'action, soit 91 % de plus.</p>
+</li>
+<li>
+<p>Décision. Demander de commenter, partager ou s'abonner dans la légende, dès la prochaine publication. Ce qui la ferait changer : un test refait sur les réels publiés après le 21/10/2026 qui donnerait p ≥ 0,05 ou un écart de sens opposé.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image9.png" alt="" loading="lazy"></figure>
+<p>La valeur de p (p &lt; 0,001) est la probabilité d'observer un écart au moins aussi grand que celui-ci si la demande d'un geste dans la légende ne changeait rien ; sous 0,05, on juge l'écart trop grand pour être dû au hasard.</p>
+<p>C'est significatif.</p></div></details><div class="jsec jsec-1"><h3>Partie 2 — Comment faire un réel qui vend ?</h3></div><div class="jsec jsec-2"><h4>Délai d&#x27;attribution des ventes</h4><p>Le fichier des ventes ne dit pas d'où vient chaque commande : on fixe donc nous-mêmes le délai pendant lequel une vente est rattachée à un réel. Pour ne pas dépendre d'un seul choix, <strong>chaque test ventes est calculé sur 4 délais d'attribution</strong> :</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Délai</th>
+<th style="text-align: left;">Fenêtre</th>
+<th style="text-align: left;">Ce qu'il capte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>24 h</strong></td>
+<td style="text-align: left;">Jour J</td>
+<td style="text-align: left;">L'effet immédiat, le jour de la publication</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>48 h</strong></td>
+<td style="text-align: left;">J et J + 1</td>
+<td style="text-align: left;">La première vague de diffusion du réel</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>72 h</strong></td>
+<td style="text-align: left;">J à J + 2</td>
+<td style="text-align: left;">La durée de vie principale d'un réel dans le fil</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>7 jours</strong></td>
+<td style="text-align: left;">J à J + 6</td>
+<td style="text-align: left;">Les réels qui continuent d'être diffusés, notamment les réels viraux</td>
+</tr>
+</tbody>
+</table></div></div><details class="test" id="test-H17"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H17</span><h3>Code promo annoncé dans un réel fait-il vendre ?</h3><span class="pill warn">Significatif en partie</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question de recherche.</strong> Quand un code promo est annoncé dans un réel, la part des commandes qui l'utilisent augmente-t-elle dans le délai d'attribution qui suit le réel ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : la part des commandes avec le code est la même dans le délai qui suit le réel que sur les 28 jours d'après. H1 : elle est plus élevée juste après le réel. On teste H0 pour chacun des 4 délais (24 h, 48 h, 72 h, 7 jours).</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Fichier nettoyé ventes_lumineva_propre.csv, colonne Discount Code ; 4 annonces de codes : SUMMER10 (réels des 27 et 29/06/2025, limité aux 10 premières commandes), CAMEDIT10 (22/11/2025, valable un seul jour), BIENVENUE10 (22/07 et 01/08/2025, code permanent). Le code partenaire B3-76CL9 est exclu.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> Pour chaque délai, on compare deux pourcentages (commandes avec ou sans le code, dans le délai ou après) sur de petits nombres de commandes : test exact de Fisher sur un tableau 2 × 2.</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Fisher calcule la probabilité d'obtenir une répartition aussi déséquilibrée si le réel n'avait aucun effet. Pour SUMMER10 et CAMEDIT10, toutes les commandes avec le code tombent dans le délai et aucune après : <strong>p &lt; 0,0001 sur les 4 délais</strong>, moins d'une chance sur 10 000. Pour BIENVENUE10 (22/07) : p = 0,03 à 24 h, 0,02 à 48 h, 0,08 à 72 h, 0,20 à 7 jours. Pour BIENVENUE10 (01/08) : p ≥ 0,44 sur tous les délais.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si p est sous <strong>0,05</strong>, le résultat est significatif. SUMMER10 et CAMEDIT10 : <strong>significatifs quel que soit le délai</strong>, résultat solide. BIENVENUE10 (22/07) : significatif à 24 h et 48 h seulement, résultat fragile. BIENVENUE10 (01/08) : jamais significatif.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Plus le délai est court, plus la part des commandes avec le code est forte, car tout se joue le jour même : les 12 commandes CAMEDIT10 représentent 75 % des commandes à 24 h, 46 % à 48 h, 39 % à 72 h et 24 % à 7 jours. <strong>Verdict : on rejette H0 pour les offres limitées, sur les 4 délais ; pour le code permanent, l'effet n'apparaît que sur 24 à 48 h et n'est pas robuste.</strong></p>
+</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">Réel(s)</th>
+<th style="text-align: left;">Limite</th>
+<th style="text-align: left;">Commandes avec le code après le réel</th>
+<th style="text-align: left;">Les 28 jours suivants</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SUMMER10</td>
+<td style="text-align: left;">27/06 et 29/06/2025</td>
+<td style="text-align: left;">10 premières commandes</td>
+<td style="text-align: left;">10 sur 17 (59 %)</td>
+<td style="text-align: left;">0 sur 58 (0 %)</td>
+<td style="text-align: left;">&lt; 0,0001</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">CAMEDIT10</td>
+<td style="text-align: left;">22/11/2025</td>
+<td style="text-align: left;">Valable le 22/11 uniquement</td>
+<td style="text-align: left;">12 sur 31 (39 %)</td>
+<td style="text-align: left;">0 sur 146 (0 %)</td>
+<td style="text-align: left;">&lt; 0,0001</td>
+<td style="text-align: left;"><strong>Significatif</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">BIENVENUE10</td>
+<td style="text-align: left;">22/07/2025</td>
+<td style="text-align: left;">Aucune (code permanent)</td>
+<td style="text-align: left;">8 sur 11 (73 %)</td>
+<td style="text-align: left;">19 sur 44 (43 %)</td>
+<td style="text-align: left;">0,078</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">BIENVENUE10</td>
+<td style="text-align: left;">01/08/2025</td>
+<td style="text-align: left;">Aucune (code permanent)</td>
+<td style="text-align: left;">2 sur 3 (67 %)</td>
+<td style="text-align: left;">17 sur 37 (46 %)</td>
+<td style="text-align: left;">0,462</td>
+<td style="text-align: left;">Non</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Résultat par délai d'attribution</strong> (commandes avec le code dans le délai ; p du test de Fisher contre les 28 jours suivants) :</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">24 h</th>
+<th style="text-align: left;">48 h</th>
+<th style="text-align: left;">72 h</th>
+<th style="text-align: left;">7 jours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SUMMER10</strong></td>
+<td style="text-align: left;">10 sur 12 (83 %), p &lt; 0,0001</td>
+<td style="text-align: left;">10 sur 13 (77 %), p &lt; 0,0001</td>
+<td style="text-align: left;">10 sur 17 (59 %), p &lt; 0,0001</td>
+<td style="text-align: left;">10 sur 26 (38 %), p &lt; 0,0001</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CAMEDIT10</strong></td>
+<td style="text-align: left;">12 sur 16 (75 %), p &lt; 0,0001</td>
+<td style="text-align: left;">12 sur 26 (46 %), p &lt; 0,0001</td>
+<td style="text-align: left;">12 sur 31 (39 %), p &lt; 0,0001</td>
+<td style="text-align: left;">12 sur 51 (24 %), p &lt; 0,0001</td>
+</tr>
+<tr>
+<td style="text-align: left;">BIENVENUE10 (22/07)</td>
+<td style="text-align: left;">5 sur 5, <strong>p = 0,03</strong></td>
+<td style="text-align: left;">8 sur 9, <strong>p = 0,02</strong></td>
+<td style="text-align: left;">8 sur 11, p = 0,08</td>
+<td style="text-align: left;">11 sur 18, p = 0,20</td>
+</tr>
+<tr>
+<td style="text-align: left;">BIENVENUE10 (01/08)</td>
+<td style="text-align: left;">1 sur 1, p = 0,47</td>
+<td style="text-align: left;">2 sur 3, p = 0,46</td>
+<td style="text-align: left;">2 sur 3, p = 0,46</td>
+<td style="text-align: left;">6 sur 11, p = 0,44</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>Interprétation.</strong> En clair, une offre annoncée en réel fait vendre, à une condition : qu'il y ait de l'urgence. SUMMER10, limité aux 10 premières commandes, a été épuisé en 3 jours ; CAMEDIT10, valable une seule journée, a fait 12 commandes et 676 €. À l'inverse, BIENVENUE10, valable tout le temps, ne crée aucun pic : rien ne pousse à l'utiliser tout de suite. Le jour de CAMEDIT10, la boutique a fait 1 208 € au lieu des 653 € habituels : environ 555 € de plus pour 68 € de remise. Petite réserve : un code qui n'existe que dans le réel prouve que le réel touche des acheteuses, pas qu'il crée des ventes qui n'auraient jamais eu lieu.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Concrètement, lancer une offre limitée par mois annoncée en réel (valable 24 h, ou réservée aux X premières commandes), pendant 3 mois, avec un code unique par réel pour mesurer chaque opération. Si ça tient le rythme de CAMEDIT10, c'est environ 6 600 € de CA en plus par an pour 800 € de remise. On arrête si les ventes baissent les jours suivants, signe que l'offre ne fait qu'avancer des achats.</p>
+</li>
+</ul></div></details><details class="test" id="test-H18"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H18</span><h3>Dire ou montrer un parfum fait-il vendre ce parfum ?</h3><span class="pill warn">Significatif en partie</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question de recherche.</strong> Quand un parfum apparaît dans un réel, se vend-il plus dans le délai d'attribution qui suit ? Et la façon de le présenter compte-t-elle : le dire à l'oral, le montrer ou l'écrire à l'écran, ou seulement l'écrire en description ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : quelle que soit la façon de le présenter et le délai, le parfum se vend comme d'habitude (autant que l'attendent les 28 jours précédents). H1 : il se vend plus. On teste H0 pour chaque façon de le présenter et chacun des 4 délais.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> Fichier nettoyé ventes_lumineva_propre.csv, commandes web du 23/06/2025 au 22/10/2026. 35 paires réel × parfum, avec un parfum déjà en vente avant le réel : <strong>13 dits à l'oral</strong> (10 réels : Fleur d'oranger, Fleur de cerisier, Mangue, Éclipse de lune…), <strong>15 montrés ou écrits à l'écran sans être dits</strong>, <strong>7 seulement en description</strong>. Les parfums lancés le jour du réel sont exclus : ils n'ont pas de ventes habituelles auxquelles se comparer.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> Chaque paire est comparée à elle-même : ventes du parfum dans le délai contre ventes attendues d'après les 28 jours précédents. C'est un test de Wilcoxon apparié (unilatéral : le réel fait-il vendre plus ?). <strong>Groupe témoin :</strong> dans les mêmes jours, on mesure aussi les ventes de tous les autres produits, pour vérifier que la hausse ne vient pas d'un pic général de la boutique.</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Dit à l'oral : p = <strong>0,002</strong> à 24 h, 48 h et 72 h, <strong>0,04</strong> à 7 jours, soit 2 chances sur 1 000 que l'écart soit dû au hasard dans les trois premiers jours. À l'écran seulement : p = 0,25 à 24 h, 0,08 à 48 h, <strong>0,010</strong> à 72 h, 0,06 à 7 jours. En description seulement : p ≥ 0,08 sur tous les délais.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si p est sous <strong>0,05</strong>, le résultat est significatif. <strong>Dit à l'oral : significatif sur les 4 délais.</strong> À l'écran seulement : significatif seulement à 72 h, donc effet plus faible et plus lent. En description seulement : jamais significatif (7 paires seulement).</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Dit à l'oral, le parfum se vend <strong>4 fois plus le jour même</strong> (22 ventes contre 5,4 attendues), 3,3 fois plus sur 48 h, 2,6 fois sur 72 h et encore 2,5 fois sur 7 jours. Montré ou écrit à l'écran sans être dit, il se vend environ 2 fois plus, avec un écart prouvé seulement à 72 h. Le témoin monte aussi un peu les jours où elle dit un parfum (autres produits × 1,6 à 24 h) : le réel attire du monde sur toute la boutique, mais le parfum cité monte bien plus, et l'écart entre les deux est prouvé le jour même (p = 0,04). <strong>Verdict : on rejette H0 pour le parfum dit à l'oral, sur les 4 délais ; à l'écran seulement, à 72 h ; pas en description seule.</strong></p>
+</li>
+</ul>
+<p><strong>Résultat par délai d'attribution :</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Façon de présenter le parfum</th>
+<th style="text-align: left;">24 h</th>
+<th style="text-align: left;">48 h</th>
+<th style="text-align: left;">72 h</th>
+<th style="text-align: left;">7 jours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Dit à l'oral</strong> (13 paires)</td>
+<td style="text-align: left;"><strong>22 contre 5,4 (× 4,1), p = 0,002</strong></td>
+<td style="text-align: left;"><strong>35 contre 10,7 (× 3,3), p = 0,002</strong></td>
+<td style="text-align: left;"><strong>42 contre 16,1 (× 2,6), p = 0,002</strong></td>
+<td style="text-align: left;"><strong>93 contre 37,5 (× 2,5), p = 0,04</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Montré ou écrit à l'écran seulement (15 paires)</td>
+<td style="text-align: left;">9 contre 4,3 (× 2,1), p = 0,25</td>
+<td style="text-align: left;">18 contre 8,6 (× 2,1), p = 0,08</td>
+<td style="text-align: left;"><strong>26 contre 12,9 (× 2,0), p = 0,010</strong></td>
+<td style="text-align: left;">52 contre 30,0 (× 1,7), p = 0,06</td>
+</tr>
+<tr>
+<td style="text-align: left;">En description seulement (7 paires)</td>
+<td style="text-align: left;">4 contre 1,5 (× 2,7), p = 0,47</td>
+<td style="text-align: left;">9 contre 2,9 (× 3,1), p = 0,27</td>
+<td style="text-align: left;">16 contre 4,4 (× 3,6), p = 0,08</td>
+<td style="text-align: left;">30 contre 10,2 (× 2,9), p = 0,08</td>
+</tr>
+<tr>
+<td style="text-align: left;">Témoin : autres produits, mêmes jours que « dit à l'oral »</td>
+<td style="text-align: left;">× 1,6, p = 0,004</td>
+<td style="text-align: left;">× 1,4, p = 0,009</td>
+<td style="text-align: left;">× 1,3, p = 0,03</td>
+<td style="text-align: left;">× 1,3, p = 0,23</td>
+</tr>
+<tr>
+<td style="text-align: left;">Écart parfum dit / témoin</td>
+<td style="text-align: left;">p = 0,04</td>
+<td style="text-align: left;">p = 0,17</td>
+<td style="text-align: left;">p = 0,12</td>
+<td style="text-align: left;">p = 0,06</td>
+</tr>
+<tr>
+<td style="text-align: left;">Surplus de CA de la boutique (produit cité contre autres réels)</td>
+<td style="text-align: left;">+61 € contre +14 €, p = 0,16</td>
+<td style="text-align: left;">+91 € contre +37 €, p = 0,20</td>
+<td style="text-align: left;">+135 € contre +26 €, p = 0,21</td>
+<td style="text-align: left;">+430 € contre +44 €, p = 0,34</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>Interprétation.</strong> Un parfum <strong>dit à l'oral</strong> se vend 4 fois plus le jour même, et l'écart tient une semaine. Simplement montré ou écrit à l'écran, il se vend environ 2 fois plus, avec un effet plus faible et plus lent. Écrit seulement en description, il ne bouge pas de façon prouvée (7 cas seulement). Le témoin montre que la hausse ne vient pas d'un simple pic de la boutique : le parfum nommé monte bien plus que le reste. <strong>Mais on ne peut pas attribuer ces ventes au seul réel.</strong> Un achat est rarement déclenché par un seul contact : c'est une <strong>accumulation</strong> (la cliente connaît la marque, a vu le parfum plusieurs fois, en a entendu parler, puis achète). Et sans pixel Meta (Test 10), on ne peut rien affirmer à 100%.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Concrètement, quand un réel doit mettre un parfum en avant, <strong>le nommer à voix haute</strong>, puis le reprendre en texte à l'écran et en description en renfort. Le montrer sans le dire ne suffit pas.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image28.png" alt="ventes_lumineva_propre.csv × reels_base.csv · 35 paires réel × parfum, commandes web du 23/06/2025 au 22/10/2026" loading="lazy"></figure></div></details><details class="test" id="test-H19"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H19</span><h3>Un réel très viral amène-t-il des ventes ?</h3><span class="pill no">Non significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question de recherche.</strong> Les ventes dépassent-elles davantage la tendance après un réel viral qu'après un réel non viral, et sur quel délai d'attribution ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : quel que soit le délai, le surplus de ventes (CA, nouvelles clientes) est le même après un réel viral qu'après un réel non viral. H1 : il est plus élevé après un réel viral. On teste H0 pour chacun des 4 délais.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 346 réels de la période des ventes : <strong>73 viraux</strong> (vues au moins <strong>2 fois la médiane</strong> des 31 réels voisins, même définition que les Tests 1 à 3), 273 non viraux ; fichier nettoyé ventes_lumineva_propre.csv, commandes web du 23/06/2025 au 22/10/2026. Surplus = ventes du délai moins la moyenne des mêmes jours sur les 4 semaines précédentes.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> Pour chaque délai, deux groupes séparés comparés sur un nombre (le surplus) : Mann-Whitney unilatéral (le réel viral fait-il vendre plus ?), car quelques semaines exceptionnelles tirent les moyennes, confirmé par un test t.</p>
+</li>
+<li>
+<p><strong>Calcul de p.</strong> Surplus de CA : p = 0,21 à 24 h, 0,18 à 48 h, 0,57 à 72 h, 0,20 à 7 jours. Surplus de nouvelles clientes : p = 0,21 ; 0,14 ; 0,33 ; 0,17. Le test t ne passe sous le seuil sur aucun délai non plus.</p>
+</li>
+<li>
+<p><strong>Significativité.</strong> La règle : si p est sous <strong>0,05</strong>, le résultat est significatif. Aucun délai ne passe sous le seuil : <strong>non significatif</strong>.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> Après un réel viral, la boutique vend un peu plus qu'après un réel ordinaire : +77 € contre +7 € le jour même, +295 € contre +15 € sur 7 jours, et +2,6 nouvelles clientes contre −0,1 sur 7 jours. Mais l'écart n'est jamais prouvé. <strong>Verdict : on ne rejette pas H0, sur aucun délai.</strong></p>
+</li>
+<li>
+<p><strong>Complément : les réels très viraux.</strong> En ne gardant que les 25 réels à au moins <strong>5 fois la médiane</strong>, l'écart se creuse sur 7 jours (+613 € de CA, +6,2 nouvelles clientes) et seul le surplus de nouvelles clientes à 7 jours passe le seuil (p = 0,03 ; CA p = 0,07). C'est un signal isolé, sur 25 réels : on le présente comme une tendance.</p>
+</li>
+</ul>
+<p><strong>Résultat par délai d'attribution</strong> (73 réels viraux contre 273 non viraux ; p du test de Mann-Whitney unilatéral) :</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">24 h</th>
+<th style="text-align: left;">48 h</th>
+<th style="text-align: left;">72 h</th>
+<th style="text-align: left;">7 jours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Surplus de CA, viraux (2× la médiane)</td>
+<td style="text-align: left;">+77 € contre +7 €, p = 0,21</td>
+<td style="text-align: left;">+147 € contre +30 €, p = 0,18</td>
+<td style="text-align: left;">+101 € contre +41 €, p = 0,57</td>
+<td style="text-align: left;">+295 € contre +15 €, p = 0,20</td>
+</tr>
+<tr>
+<td style="text-align: left;">Surplus de nouvelles clientes, viraux (2× la médiane)</td>
+<td style="text-align: left;">+0,6 contre 0, p = 0,21</td>
+<td style="text-align: left;">+1,2 contre +0,1, p = 0,14</td>
+<td style="text-align: left;">+0,9 contre +0,2, p = 0,33</td>
+<td style="text-align: left;">+2,6 contre −0,1, p = 0,17</td>
+</tr>
+<tr>
+<td style="text-align: left;">Complément : surplus de CA, très viraux (5× la médiane, 25 réels)</td>
+<td style="text-align: left;">+11 €, p = 0,24</td>
+<td style="text-align: left;">+118 €, p = 0,16</td>
+<td style="text-align: left;">+50 €, p = 0,43</td>
+<td style="text-align: left;">+613 €, p = 0,07</td>
+</tr>
+<tr>
+<td style="text-align: left;">Complément : surplus de nouvelles clientes, très viraux</td>
+<td style="text-align: left;">+0,3, p = 0,24</td>
+<td style="text-align: left;">+1,5, p = 0,08</td>
+<td style="text-align: left;">+1,1, p = 0,21</td>
+<td style="text-align: left;"><strong>+6,2, p = 0,03</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>Interprétation.</strong> En clair, un réel viral ne fait pas vendre de façon prouvée : la boutique vend un peu plus après, surtout sur une semaine, mais l'écart n'est jamais significatif. Seuls les réels très viraux attirent un peu plus de nouvelles clientes sur 7 jours. Et surtout, on ne peut pas attribuer ces ventes au réel : le pixel Meta n'est pas installé sur la boutique Shopify, donc on ne sait pas si une commande vient d'une personne qui a vu le réel. On compare seulement les ventes de la boutique avant et après le réel : ça montre une tendance, pas une preuve. Si la viralité fait vendre, c'est donc de façon lente et indirecte : le réel touche surtout des inconnus, qui s'abonnent (Test 1), découvrent la marque, et achètent plus tard.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Concrètement, première action : installer le pixel Meta sur Shopify et mettre des liens tracés (UTM) en bio et en story. Sans ça, on ne pourra jamais dire quelle vente vient de quel réel. Ensuite, ne pas juger un réel viral sur ses ventes immédiates, mais sur 7 jours et sur les abonnés qu'il apporte, en suivant les commandes attribuées par le pixel.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image29.png" alt="ventes_lumineva_propre.csv × reels_base.csv · 346 réels, commandes web du 23/06/2025 au 22/10/2026" loading="lazy"></figure></div></details><details class="test" id="test-H7"><summary class="test-h"><span class="test-hi"><span class="label">Hypothèse H7</span><h3>Un reel qui fait beaucoup réagir amène-t-il plus de ventes dans la semaine qui suit ?</h3><span class="pill no">Non significatif</span></span><span class="test-tog" aria-hidden="true"></span></summary><div class="test-b"><ul>
+<li>
+<p><strong>Question marketing.</strong> Un reel qui fait beaucoup réagir amène-t-il plus de ventes dans la semaine qui suit ?</p>
+</li>
+<li>
+<p><strong>Question de recherche.</strong> Les reels qui font beaucoup réagir (n = 166) sont-ils suivis de plus de chiffre d'affaires de J+1 à J+7 que les reels qui font peu réagir (n = 166) ?</p>
+</li>
+<li>
+<p><strong>Hypothèse.</strong> H0 : en moyenne, les ventes de la semaine suivante sont les mêmes après un reel qui fait beaucoup réagir qu'après un reel qui fait peu réagir ; la réaction ne change rien. H1 : en moyenne, elles ne sont pas les mêmes. Si p &lt; 0,05, on rejette H0 et on retient H1.</p>
+</li>
+<li>
+<p><strong>Périmètre.</strong> 332 reels publiés du 26/06/2025 au 13/10/2026 et disposant d'une semaine de ventes complète (boutique ouverte depuis le 27/06/2025, jours de fermeture exclus) : 166 qui font beaucoup réagir, 166 peu. Un reel fait beaucoup réagir si ses interactions (j'aime + commentaires + partages + enregistrements) pour 1 000 comptes touchés dépassent la médiane (38 pour 1 000). Ventes = chiffre d'affaires net des commandes web du jour J+1 au jour J+7, exprimé en écart à la médiane du mois (pour retirer la saison : Noël, rentrée). Sources : reels_base_completee.xlsx et ventes_lumineva_propre.csv.</p>
+</li>
+<li>
+<p><strong>Test choisi.</strong> 166 contre 166 : deux groupes indépendants et une variable quantitative (CA), donc test t pour échantillons indépendants. Levene : F = 0,00 ; p = 0,973 → variances égales, ligne « variances égales » retenue. Résultat confirmé par Mann-Whitney, car le chiffre d'affaires journalier est très asymétrique (asymétrie = 1,8) : quelques gros jours tirent la moyenne.</p>
+</li>
+<li>
+<p><strong>Le résultat.</strong> 505 € en moyenne pour les reels qui font beaucoup réagir contre 469 € pour ceux qui font peu réagir (t = 0,44 ; ddl = 330 ; p = 0,659). En médiane, 401 € contre 345 €, soit 56 € d'écart (IC 95 % : -102 à 200) ; Mann-Whitney p = 0,627. <strong>Verdict : non significatif, H0 conservée.</strong> <strong>Valeur de p :</strong> p = 0,659 veut dire que, si la réaction à un reel ne changeait rien aux ventes de la semaine suivante, on obtiendrait un écart au moins aussi grand par pur hasard dans environ 66 cas sur 100 ; comme p est supérieur à 0,05, l'écart est non significatif.</p>
+</li>
+</ul>
+<p><strong>Statistiques de groupe</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Fait beaucoup réagir</th>
+<th style="text-align: left;">N</th>
+<th style="text-align: left;">Moyenne</th>
+<th style="text-align: left;">Écart type</th>
+<th style="text-align: left;">Erreur standard de la moyenne</th>
+<th style="text-align: left;">Médiane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Oui</td>
+<td style="text-align: left;">166</td>
+<td style="text-align: left;">505,28</td>
+<td style="text-align: left;">766,38</td>
+<td style="text-align: left;">59,48</td>
+<td style="text-align: left;">400,56</td>
+</tr>
+<tr>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">166</td>
+<td style="text-align: left;">469,46</td>
+<td style="text-align: left;">709,59</td>
+<td style="text-align: left;">55,07</td>
+<td style="text-align: left;">344,70</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Test des échantillons indépendants</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Hypothèse</th>
+<th style="text-align: left;">t</th>
+<th style="text-align: left;">ddl</th>
+<th style="text-align: left;">p unilatéral</th>
+<th style="text-align: left;">p bilatéral</th>
+<th style="text-align: left;">Différence moyenne</th>
+<th style="text-align: left;">Erreur standard</th>
+<th style="text-align: left;">IC 95 % inférieur</th>
+<th style="text-align: left;">IC 95 % supérieur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Variances égales</strong></td>
+<td style="text-align: left;"><strong>0,44</strong></td>
+<td style="text-align: left;"><strong>330</strong></td>
+<td style="text-align: left;"><strong>0,329</strong></td>
+<td style="text-align: left;"><strong>0,659</strong></td>
+<td style="text-align: left;"><strong>35,83</strong></td>
+<td style="text-align: left;"><strong>81,06</strong></td>
+<td style="text-align: left;"><strong>-123,64</strong></td>
+<td style="text-align: left;"><strong>195,29</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Variances inégales</td>
+<td style="text-align: left;">0,44</td>
+<td style="text-align: left;">328,1</td>
+<td style="text-align: left;">0,329</td>
+<td style="text-align: left;">0,659</td>
+<td style="text-align: left;">35,83</td>
+<td style="text-align: left;">81,06</td>
+<td style="text-align: left;">-123,64</td>
+<td style="text-align: left;">195,30</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p><strong>Interprétation.</strong> Les ventes de la semaine suivante ne diffèrent pas selon que le reel fait beaucoup ou peu réagir : l'écart moyen de 36 € sur la semaine est du même ordre que la variation habituelle (écart type d'environ 766 €). Les semaines de ventes se chevauchent d'un reel à l'autre (elle publie presque chaque jour), et d'autres causes jouent (promotions, lancements) : ce test montre un lien éventuel, pas une cause.</p>
+</li>
+<li>
+<p><strong>Décision.</strong> Ne pas chercher à faire réagir dans le but de vendre plus dans la semaine ; juger les reels sur d'autres objectifs (vues, abonnés), à partir des prochaines publications. <strong>Ce qui la ferait changer :</strong> un nouveau test sur les prochains mois donnant p &lt; 0,05, ou un lien net entre un reel précis et un pic de ventes.</p>
+</li>
+</ul>
+<figure class="tfig"><img src="assets/tests/image2.gif" alt="505 € contre 469 €" loading="lazy"></figure></div></details></div>
+<!-- TESTS:FIN -->
+</div></section>
+
+</main>
+<div class="pager"><div class="wrap"><a class="prev" href="hypotheses.html"><span class="label">Page précédente</span><b>Hypothèses</b></a><a class="next" href="recommandations.html"><span class="label">Page suivante</span><b>Recommandations</b></a></div></div>
+<footer><div class="wrap">
+  <p><strong>Lumineva · Les réels qui font performer Lumineva.</strong> Projet du module Smart Data Marketing, M2 IAE, réalisé par Jodie Trouillet, Jade Bousquet et Hippolyte Tardy.</p>
+  <p>Sources : Brief, Méthodologie, Test réalisé, reels_base_completee.xlsx et ventes_lumineva_propre.csv (Drive « Projet_Lumineva »). Mise à jour : 18 novembre 2026.</p>
+</div></footer>
+<script src="js/graphiques.js"></script>
+</body>
+</html>

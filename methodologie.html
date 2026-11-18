@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Méthodologie · Lumineva</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Roboto+Condensed:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="promo"><div class="wrap"><span>Smart Data Marketing · M2 IAE</span><span>·</span><span>Projet réalisé pour Lumineva</span></div></div>
+<header class="hero hero-sm"><div class="wrap"><div class="hero-top"><a href="index.html"><img src="assets/logo.png" alt="Lumineva, retour à l'accueil" width="540" height="160"></a><div class="who">Dashboard de restitution<br>Page 4 sur 7</div></div><h1>Méthodologie</h1><p class="sub">Notre travail étape par étape : récupérer les données, construire la grille d'analyse, vérifier les bases, analyser les thèmes et préparer les tests.</p></div></header>
+<nav class="nav" aria-label="Pages du dashboard"><div class="wrap"><ul><li><a href="index.html"><i>1</i>Démarche</a></li><li><a href="etapes.html"><i>2</i>Étapes</a></li><li><a href="donnees.html"><i>3</i>Données</a></li><li><a href="methodologie.html" class="on" aria-current="page"><i>4</i>Méthodologie</a></li><li><a href="hypotheses.html"><i>5</i>Hypothèses</a></li><li><a href="tests.html"><i>6</i>Tests</a></li><li><a href="recommandations.html"><i>7</i>Recommandations</a></li></ul></div></nav>
+<main>
+<section id="intro"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">La méthodologie, dans l'ordre de notre travail</span>
+    <h2>Comment nous avons transformé des vidéos en données fiables</h2>
+    <p class="lead">Cette page reprend les étapes de notre travail en détaillant, pour chacune, ce que nous avons fait, avec quels outils et pourquoi.</p>
+  </div>
+  <div class="rappel"><span class="label">Rappel · Notre axe</span><p>On met toutes les vidéos dans une base de données. Pour chaque vidéo, on note ses vues et des critères oui / non : ce qu'elle écrit, ce qu'elle dit, ce qu'elle montre. Puis on cherche quels critères font plus performer les reels.</p><a class="more" href="index.html#cadrage">Voir la démarche</a></div>
+  <ol class="mtoc">
+    <li><a href="#recuperation"><b>1</b><span>Récupérer les données</span></a></li>
+    <li><a href="#grille"><b>2</b><span>Construire la grille d'analyse des reels</span></a></li>
+    <li><a href="#verification"><b>3</b><span>Vérifier les bases</span></a></li>
+    <li><a href="#themes"><b>4</b><span>Analyser les thèmes de chaque reel</span></a></li>
+    <li><a href="#template"><b>5</b><span>Préparer les tests</span></a></li>
+  </ol>
+</div></section>
+
+<section id="recuperation"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Étape 1 · Récupérer les données</span>
+    <h2>Les vidéos, leurs statistiques et les ventes</h2>
+    <p class="lead">Trois sources, récupérées de trois façons différentes. Les vidéos ne nous ont pas été fournies : nous les avons récupérées nous-mêmes sur le compte Instagram de Jessica.</p>
+  </div>
+  <div class="rappel"><span class="label">Rappel</span><p>Les données couvrent les réels du 1er janvier 2025 au 21 octobre 2026, date à laquelle nous avons arrêté de télécharger les vidéos et de récupérer les données.</p><a class="more" href="etapes.html">Étape 1 sur la page Étapes</a><a class="more" href="donnees.html">Le détail sur la page Données</a></div>
+  <div class="grid3">
+    <div class="card"><span class="label">1a · Scrapping des vidéos Instagram</span><h3>Récupérer les MP4 du compte de Jessica</h3>
+      <ol>
+        <li><strong>Connexion.</strong> Jodie s'est connectée elle-même à Instagram dans le navigateur intégré de Claude. L'IA n'a jamais saisi de mot de passe.</li>
+        <li><strong>Lister les réels.</strong> Une requête directe à Instagram a été bloquée (« trop de requêtes ») : nous n'avons pas insisté. Nous avons fait défiler lentement la page des réels (pause de 2,5 à 4,5 s) et un petit script a lu la liste affichée.</li>
+        <li><strong>Trier par date.</strong> 639 réels trouvés ; les 182 de 2024 sont exclus : 457 réels depuis le 1er janvier 2025.</li>
+        <li><strong>Télécharger.</strong> Avec yt-dlp, sans utiliser la session Instagram, en attendant 4 à 9 s entre deux vidéos. ffmpeg assemble l'image et le son. Résultat : 456 vidéos sur 457 (3,1 Go).</li>
+        <li><strong>Compléter.</strong> 31 réels publiés du 22 septembre au 21 octobre 2026 ont été ajoutés : <strong>487 vidéos</strong> au total.</li>
+      </ol></div>
+    <div class="card"><span class="label">1b · Statistiques des réels</span><h3>Les exports Meta Business Suite</h3>
+      <p>Pour chaque réel, nous avons récupéré les indicateurs officiels du compte via Meta Business Suite :</p>
+      <div class="chips"><span class="chip">Vues</span><span class="chip">Mentions J'aime</span><span class="chip">Couverture</span><span class="chip">Partages</span><span class="chip">Abonnés en plus</span><span class="chip">Commentaires</span><span class="chip">Enregistrements</span></div>
+      <p>Nous avons vérifié que les vues, J'aime et commentaires récupérés avec les vidéos correspondaient bien à ces exports. Les cases manquantes ont été complétées avec l'export (310 cases).</p></div>
+    <div class="card"><span class="label">1c · Ventes du site</span><h3>L'export Shopify</h3>
+      <p>Transmis par M. Favarin depuis le compte administrateur Shopify du site : toutes les données relatives aux produits et aux ventes (commandes, clients, stock).</p>
+      <p>Les données sont pseudonymisées : aucune cliente n'est identifiable, et seuls des totaux sont montrés dans ce dashboard.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px"><span class="label">Outils utilisés pour la récupération</span>
+    <div class="tbl"><table><thead><tr><th>Outil</th><th>À quoi il a servi</th><th>Pourquoi celui-là</th></tr></thead><tbody>
+      <tr><td><strong>Claude Code (Anthropic)</strong></td><td>Agent qui a écrit et lancé les scripts de récupération</td><td>Automatiser chaque étape et pouvoir la rejouer</td></tr>
+      <tr><td><strong>Navigateur intégré</strong></td><td>Afficher le compte et lister les réels</td><td>Jodie s'y connecte elle-même</td></tr>
+      <tr><td><strong>yt-dlp</strong></td><td>Télécharger les vidéos en MP4</td><td>Outil libre reconnu, fonctionne sans la session Instagram</td></tr>
+      <tr><td><strong>ffmpeg</strong> (via imageio-ffmpeg)</td><td>Assembler l'image et le son</td><td>Absent du PC, fourni par cette bibliothèque</td></tr>
+      <tr><td><strong>Meta Business Suite</strong></td><td>Exporter les statistiques de chaque réel</td><td>Chiffres officiels d'Instagram</td></tr>
+      <tr><td><strong>Shopify (administration)</strong></td><td>Exporter les commandes et les produits</td><td>Source des ventes du site</td></tr>
+    </tbody></table></div></div>
+</div></section>
+
+<section id="grille"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Étape 2 · Construire la grille d'analyse</span>
+    <h2>Chaque reel devient une ligne, chaque critère une colonne</h2>
+    <p class="lead">Nous avons analysé l'intégralité des 487 vidéos avec différents outils. Chaque outil remplit une partie des colonnes : ce qu'elle écrit, ce qu'elle dit, ce qu'elle montre. La grille compte 151 colonnes de travail ; le fichier final en garde 148.</p>
+  </div>
+  <div class="rappel"><span class="label">Rappel</span><p>C'est l'étape 2 de notre cheminement : analyser l'ensemble des vidéos.</p><a class="more" href="etapes.html">Voir les étapes</a></div>
+  <div class="grid3">
+    <div class="card"><span class="label">Ce qu'elle écrit</span><ul><li>Texte à l'écran et sous-titres</li><li>Légende : appel à l'action, promotion, lancement, hashtags, longueur</li></ul></div>
+    <div class="card"><span class="label">Ce qu'elle dit</span><ul><li>Transcription, nombre de mots, débit</li><li>Accroche orale (3 premières secondes)</li><li>Bougies, enfants, famille, coulisses, prix, émotion cités à l'oral</li><li>Musique de fond, voix in / voix off</li></ul></div>
+    <div class="card"><span class="label">Ce qu'elle montre</span><ul><li>Visages et personnes à l'écran (Jessica, mari, filles…)</li><li>Bougie visible, produit seul, lieu</li><li>Face caméra, visage dès la 1re seconde</li><li>Montage : durée, plans, coupes</li></ul></div>
+  </div>
+  <div class="card" style="margin-top:16px"><span class="label">Les familles de colonnes</span>
+    <div class="chips"><span class="chip">Identification</span><span class="chip">Statistiques Instagram</span><span class="chip">Format (durée, parole)</span><span class="chip">Accroche (3 premières secondes)</span><span class="chip">Son</span><span class="chip">Visuel</span><span class="chip">Description (légende)</span><span class="chip">Contenu (sujet, format)</span><span class="chip">Ventes</span></div></div>
+  <div class="card" style="margin-top:16px"><h3>Quel outil remplit quelles colonnes</h3>
+    <div class="tbl"><table><thead><tr><th>Outil</th><th>Ce que c'est</th><th>À quoi il sert</th><th>Limite</th><th>Outil de contrôle</th></tr></thead><tbody id="tb-models"></tbody></table></div>
+    <p class="note">Tous ces modèles tournent sur notre ordinateur, sauf Claude, qui lit le texte des légendes et des transcriptions (voir <a href="#ia">Confidentialité</a>).</p></div>
+</div></section>
+
+<section id="verification"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Étape 3 · Vérifier les bases</span>
+    <h2>Un contrôle à la main, puis un second outil</h2>
+    <p class="lead">Une fois les bases créées, nous avons d'abord vérifié à la main 60 reels de la grille d'analyse. Puis nous avons refait chaque mesure avec un outil différent. Si les deux résultats sont les mêmes, on sait que la donnée est juste.</p>
+  </div>
+  <div class="rappel"><span class="label">Rappel</span><p>Ce sont les étapes 3 et 4 de notre cheminement : contrôler les bases, puis les nettoyer.</p><a class="more" href="etapes.html">Voir les étapes</a></div>
+  <div class="grid2">
+    <div class="card"><span class="label">3a · Contrôle humain</span><h3>60 reels vérifiés entièrement à la main</h3><p>Nous avons vérifié manuellement, sans aucun outil, ce qui avait été rempli dans la grille d'analyse pour 60 reels. Pour chacun, nous avons regardé le reel et comparé notre propre interprétation avec ce que les critères avaient détecté : chaque critère correspond-il bien à ce qu'on voit et entend, et chaque reel est-il bien rangé ?</p><p class="note">Exemples de critères vérifiés : qui est à l'écran, s'il y a une bougie, si elle parle, s'il y a de la musique.</p></div>
+    <div class="card"><span class="label">3b · Second outil</span><h3>Chaque mesure refaite avec l'IA, par un modèle différent</h3><p>Nous avons refait les mesures de la grille avec l'IA, en utilisant à chaque fois un modèle différent de celui qui avait rempli la colonne. L'objectif : repérer les points de friction, c'est-à-dire les critères sur lesquels les deux modèles ne sont pas d'accord.</p><p class="note">Image et parole : un échantillon de 120 vidéos. Musique et texte : toutes les vidéos.</p></div>
+  </div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="card"><h3>Les outils de contrôle (le 2e avis)</h3>
+      <div class="tbl"><table><thead><tr><th>Outil</th><th>Ce qu'il contrôle</th></tr></thead><tbody id="tb-ctrl"></tbody></table></div></div>
+    <div class="card"><h3>Résultat : 34 comparaisons d'outils</h3>
+      <p>L'accord entre deux outils se mesure avec le kappa de Cohen : au-dessus de 0,6 ils sont d'accord, sous 0,4 l'accord est faible.</p>
+      <div class="chart" id="ch-rel"></div>
+      <ul>
+        <li><span class="pill ok">Solide</span> kappa ≥ 0,6 et même conclusion avec les deux outils.</li>
+        <li><span class="pill warn">À vérifier</span> kappa entre 0,4 et 0,6.</li>
+        <li><span class="pill bad">Fragile</span> kappa &lt; 0,4, ou la conclusion change selon l'outil.</li>
+      </ul></div>
+  </div>
+  <div class="card" style="margin-top:16px"><span class="label">Conséquence · Nettoyage des bases</span><h3>Trois colonnes retirées</h3>
+    <p>Ces contrôles, notamment manuels, ont montré que trois critères n'étaient pas cohérents et pas sûrs. Nous les avons supprimés :</p>
+    <div class="chips"><span class="chip">Format « confession »</span><span class="chip">Mots-indices de la confession (justification du oui / non)</span><span class="chip">Luminosité</span></div>
+    <a class="more" href="donnees.html#bases">Voir les bases nettoyées</a></div>
+</div></section>
+
+<section id="themes"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Étape 4 · Analyser les thèmes de chaque reel</span>
+    <h2>Les thèmes, trouvés à partir des voix off ou in</h2>
+    <p class="lead">Nous avons ensuite créé une autre base, avec une autre méthode et un modèle différent, pour récolter les thèmes de chaque reel. Nous nous sommes basés uniquement sur ce que dit Jessica, en voix off ou en voix in : sa parole montre directement les sujets autour desquels elle construit sa prise de parole, et elle permet de traiter de la même façon des vidéos aux codes visuels très différents.</p>
+  </div>
+  <div class="rappel"><span class="label">Rappel</span><p>C'est l'étape 5 de notre cheminement : trouver les thèmes de chaque reel.</p><a class="more" href="etapes.html">Voir les étapes</a></div>
+  <div class="grid2">
+    <div class="card"><h3>Le corpus</h3><div class="funnel" id="funnel-theme"></div><p class="note">Exclus : vidéos sans parole ou de moins de 15 mots, trop courtes pour être analysées à partir de la voix.</p></div>
+    <div class="card"><h3>Du libellé libre au thème final</h3><div class="funnel" id="funnel-labels"></div><p class="note">Nous n'avons pas imposé de liste de thèmes au départ : les sujets réellement abordés ont émergé d'eux-mêmes.</p></div>
+  </div>
+  <div class="steps" style="margin-top:16px">
+    <div class="step"><div class="step-n oct">4a</div><div class="body"><h3>Transcrire la voix</h3><p><strong>faster-whisper</strong> retranscrit automatiquement ce que dit Jessica. Plusieurs transcriptions ont été vérifiées à la main pour contrôler leur fiabilité.</p></div></div>
+    <div class="step"><div class="step-n oct">4b</div><div class="body"><h3>Décrire chaque reel</h3><p><strong>Gemma 4 12B</strong>, exécuté en local via Ollama, lit chaque transcription et formule librement un résumé du sujet, un thème principal et jusqu'à trois thèmes secondaires. Résultat : 950 libellés libres.</p><div class="why-box"><span class="label">Pourquoi Gemma 4 12B</span>
+        <p>Nous avons retenu Gemma 4 12B, exécuté localement via Ollama, pour sa capacité à comprendre et interpréter des transcriptions en langage naturel.</p>
+        <p>Contrairement aux modèles spécialisés dans l'extraction de mots-clés ou d'entités, un modèle de langage génératif permet d'analyser le discours dans son ensemble, d'en dégager le sens et de proposer une synthèse thématique. Cette capacité était particulièrement importante pour notre étude, les Reels pouvant aborder plusieurs sujets simultanément.</p>
+        <p>Ce modèle permettait également de générer librement un résumé, un thème principal et jusqu'à trois thèmes secondaires, sans imposer de classification prédéfinie.</p>
+        <p>Enfin, son choix reposait sur un compromis entre capacités d'analyse et contraintes techniques. Avec 16 Go de mémoire disponible, nous avons privilégié un modèle suffisamment performant pour notre tâche, tout en permettant une exécution locale des traitements, conformément à nos exigences de confidentialité.</p></div></div></div>
+    <div class="step"><div class="step-n oct">4c</div><div class="body"><h3>Regrouper par le sens</h3><p><strong>bge-m3</strong> transforme les libellés en vecteurs pour comparer leur sens, et <strong>K-means</strong> regroupe les libellés proches.</p></div></div>
+    <div class="step"><div class="step-n oct">4d</div><div class="body"><h3>Ranger en 26 sous-thèmes, puis 10 thèmes</h3><p>Le rangement <strong>n'est pas fait par une IA</strong>. Un programme Python simple (regrouper_themes.py, appelé par ranger_10_themes.py) lit le libellé écrit par Gemma et l'envoie dans un sous-thème selon les mots qu'il contient. Par exemple, un libellé qui contient « grossesse » va dans « Grossesse et maternité », qui fait partie du thème « Vie familiale ». Le passage des 26 sous-thèmes aux 10 thèmes est une table de correspondance décidée par le groupe.</p><p class="note">Une grille de règles est transparente et reproductible : on peut montrer pourquoi chaque reel est dans son thème, et relancer le programme redonne exactement le même résultat.</p></div></div>
+    <div class="step"><div class="step-n oct">4e</div><div class="body"><h3>Corriger à la main : 63 reels sur 365 (17 %)</h3><p>En relisant le sujet de chaque reel, 63 étaient mal rangés par la grille. Chaque correction est écrite dans le script et marquée « oui » dans la colonne corrige_a_la_main.</p></div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><span class="label">Les 10 thèmes retenus</span>
+    <div class="chips"><span class="chip">Vie familiale</span><span class="chip">Anecdotes clients</span><span class="chip">Humour de situation</span><span class="chip">Vie d'entrepreneur</span><span class="chip">Réseaux sociaux</span><span class="chip">Coulisses</span><span class="chip">Présentation des produits</span><span class="chip">Prix juste</span><span class="chip">Valeurs et société</span><span class="chip">Lancements et fêtes</span></div>
+    <p>Un reel peut aborder plusieurs sujets : on garde un thème principal et jusqu'à trois thèmes secondaires.</p></div>
+
+  <div class="card" style="margin-top:16px"><span class="label">Outils utilisés pour l'analyse des thèmes</span>
+    <div class="tbl"><table><thead><tr><th>Outil</th><th>Utilisation</th></tr></thead><tbody><tr><td><strong>faster-whisper</strong></td><td>Transcrire les paroles des vidéos.</td></tr><tr><td><strong>Ollama / Gemma 4 12B</strong></td><td>Analyser les transcriptions et proposer des descriptions et thèmes.</td></tr><tr><td><strong>bge-m3</strong></td><td>Représenter les libellés sous forme de vecteurs sémantiques pour comparer leur sens.</td></tr><tr><td><strong>K-means</strong></td><td>Regrouper les libellés sémantiquement proches.</td></tr><tr><td><strong>Python</strong></td><td>Automatiser les traitements et les analyses.</td></tr><tr><td><strong>pandas</strong></td><td>Manipuler les données et les tableaux.</td></tr><tr><td><strong>numpy</strong></td><td>Effectuer les calculs numériques.</td></tr><tr><td><strong>scikit-learn</strong></td><td>Réaliser les regroupements et traitements statistiques.</td></tr></tbody></table></div>
+    <p class="note">Notre démarche : transformer un ensemble de vidéos brutes en données exploitables, identifier les thèmes récurrents sans imposer de classification initiale, puis croiser ces thèmes avec les performances Instagram pour dégager des enseignements marketing.</p></div>
+</div></section>
+
+<section id="template"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Étape 5 · Préparer les tests</span>
+    <h2>Une même fiche pour tous les tests : le template analyse test</h2>
+    <p class="lead">À partir de ces bases, nous avons défini nos hypothèses, puis nous les avons testées une par une avec le même modèle de fiche.</p>
+  </div>
+  <div class="rappel"><span class="label">Rappel</span><p>Ce sont les étapes 6 et 7 de notre cheminement : définir les hypothèses, puis les tester.</p><a class="more" href="hypotheses.html">Voir les hypothèses</a><a class="more" href="tests.html">Voir les tests</a></div>
+  <div class="grid2">
+    <div class="card"><span class="label">Le template analyse test</span><ol>
+      <li><strong>Question marketing</strong>, en langage courant.</li>
+      <li><strong>Question de recherche</strong> : groupe A contre groupe B, sur quel indicateur.</li>
+      <li><strong>Hypothèses</strong> H0 (aucune différence) et H1 (différence).</li>
+      <li><strong>Périmètre</strong> : réels, dates, définition du critère, source, données exclues.</li>
+      <li><strong>Test choisi</strong> et pourquoi (Levene, test de contrôle).</li>
+      <li><strong>Résultat</strong> et verdict, avec une phrase sur la valeur de p.</li>
+      <li><strong>Interprétation</strong>, <strong>décision</strong> et ce qui la ferait changer.</li>
+    </ol></div>
+  </div>
+</div></section>
+
+<section id="ia"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Confidentialité et usage de l'IA</span>
+    <h2>Ce qui est resté sur notre ordinateur</h2>
+  </div>
+  <div class="grid2">
+    <div class="card"><ul>
+      <li><strong>Claude Code</strong> a servi d'agent : il a écrit les scripts, lancé les calculs, lu et classé le texte de chaque vidéo, avec une citation obligatoire vérifiée mot à mot.</li>
+      <li><strong>Restent sur l'ordinateur</strong> : les vidéos, les sons et les images. Tous les modèles d'analyse tournent en local, Gemma compris.</li>
+      <li><strong>Est sorti de l'ordinateur</strong> : le texte des légendes et des transcriptions, lu par Claude. À signaler à Jessica, la charte demandant son accord pour tout outil en ligne.</li>
+      <li>Seul le fichier anonymisé des commandes a été utilisé. Le dashboard ne montre que des totaux.</li>
+    </ul></div>
+    <div class="card"><span class="label">Données personnelles</span><p>Les vidéos contiennent des informations sur Jessica, ses enfants et ses proches. Les visages sont réduits à des rôles (Jessica, mari, filles…) et ne sont jamais publiés. Les données de la boutique sont sous convention : suppression prévue après la soutenance.</p></div>
+  </div>
+  <details style="margin-top:16px"><summary>Tous les logiciels utilisés (versions)</summary><div class="in">
+    <div class="tbl"><table><thead><tr><th>Outil</th><th>À quoi il a servi</th><th>Pourquoi celui-là</th></tr></thead><tbody id="tb-soft"></tbody></table></div>
+  </div></details>
+</div></section>
+
+</main>
+<div class="pager"><div class="wrap"><a class="prev" href="donnees.html"><span class="label">Page précédente</span><b>Données</b></a><a class="next" href="hypotheses.html"><span class="label">Page suivante</span><b>Hypothèses</b></a></div></div>
+<footer><div class="wrap">
+  <p><strong>Lumineva · Les réels qui font performer Lumineva.</strong> Projet du module Smart Data Marketing, M2 IAE, réalisé par Jodie Trouillet, Jade Bousquet et Hippolyte Tardy.</p>
+  <p>Sources : Brief, Méthodologie, Test réalisé, reels_base_completee.xlsx et ventes_lumineva_propre.csv (Drive « Projet_Lumineva »). Mise à jour : 18 novembre 2026.</p>
+</div></footer>
+<script src="js/graphiques.js"></script>
+</body>
+</html>

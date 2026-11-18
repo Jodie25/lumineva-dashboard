@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Données · Lumineva</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Roboto+Condensed:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="promo"><div class="wrap"><span>Smart Data Marketing · M2 IAE</span><span>·</span><span>Projet réalisé pour Lumineva</span></div></div>
+<header class="hero hero-sm"><div class="wrap"><div class="hero-top"><a href="index.html"><img src="assets/logo.png" alt="Lumineva, retour à l'accueil" width="540" height="160"></a><div class="who">Dashboard de restitution<br>Page 3 sur 7</div></div><h1>Données</h1><p class="sub">D'où viennent les données, comment nous les avons nettoyées, et ce qu'elles contiennent.</p></div></header>
+<nav class="nav" aria-label="Pages du dashboard"><div class="wrap"><ul><li><a href="index.html"><i>1</i>Démarche</a></li><li><a href="etapes.html"><i>2</i>Étapes</a></li><li><a href="donnees.html" class="on" aria-current="page"><i>3</i>Données</a></li><li><a href="methodologie.html"><i>4</i>Méthodologie</a></li><li><a href="hypotheses.html"><i>5</i>Hypothèses</a></li><li><a href="tests.html"><i>6</i>Tests</a></li><li><a href="recommandations.html"><i>7</i>Recommandations</a></li></ul></div></nav>
+<main>
+<section id="chiffres"><div class="wrap"><div class="sec-head"><span class="label">En un coup d'œil</span><h2>Nos deux bases en chiffres</h2></div><div class="kpis" id="kpis"></div></div></section><section id="donnees"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Provenance des informations</span>
+    <h2>D'où viennent les chiffres</h2>
+    <p class="lead">Trois sources, toutes arrêtées au 21 octobre 2026 pour les vidéos et au 22 octobre 2026 pour les ventes. Aucun chiffre n'est écrit à la main : ils sont tous calculés par des scripts.</p>
+  </div>
+  <div class="grid3">
+    <div class="card"><span class="label">Source 1 · Boutique</span><h3>Shopify</h3><p>Export des commandes, produits et clients depuis le compte administrateur du site, transmis par M. Favarin. Les données sont pseudonymisées : aucune cliente n'est identifiable.</p></div>
+    <div class="card"><span class="label">Source 2 · Vidéos</span><h3>Instagram, récupéré par nos soins</h3><p>Toutes les vidéos MP4 du compte depuis le 1er janvier 2025 (les 182 réels de 2024 sont exclus), avec leurs vues, J'aime et commentaires. Téléchargées avec yt-dlp, sans la session Instagram, et jamais republiées.</p></div>
+    <div class="card"><span class="label">Source 3 · Statistiques</span><h3>Meta Business Suite</h3><p>Export officiel, réel par réel : vues, mentions J'aime, couverture, partages, abonnés en plus, commentaires, enregistrements. Nous avons vérifié que nos chiffres correspondent à cet export.</p></div>
+  </div>
+
+  <div class="grid2" id="bases" style="margin-top:20px">
+    <div class="card">
+      <span class="label">Base des ventes nettoyée</span>
+      <h3>De 1 602 commandes à 1 577 commandes web</h3>
+      <div class="funnel" id="funnel-sales"></div>
+      <p>On déduit les remboursements (344,62 €) et on exclut les pourboires (249,37 €). Il reste <strong>98 468,90 € de chiffre d'affaires net TTC</strong>.</p>
+      <p>Période : du 23 juin 2025 au 22 octobre 2026. La première vraie vente date du 27 juin 2025 (les commandes du 23 juin étaient des essais). Sur 487 jours, <strong>442 sont exploitables</strong> : on retire les 4 jours avant le lancement, deux fermetures présumées (15 décembre 2025 – 4 janvier 2026 et 9 – 27 juin 2026, à confirmer avec Jessica) et le 22 octobre, incomplet (export arrêté à 6 h 40).</p>
+      <p class="note">Le fichier compte une ligne par produit acheté. Pour compter commandes et chiffre d'affaires, on ne garde qu'une ligne par commande (filtre compter_commande = 1).</p>
+      <p class="src">Source : ventes_lumineva_propre.csv (2. Base de donnée / BDD nettoyée).</p>
+    </div>
+    <div class="card">
+      <span class="label">Base des réels</span>
+      <h3>487 vidéos, une ligne chacune</h3>
+      <div class="funnel" id="funnel-reels"></div>
+      <p>Fichier final : <strong>reels_base_completee.xlsx</strong>, 148 colonnes. Seules les cases vides ont été remplies avec l'export Instagram (310 cases : vues, portée, partages, enregistrements, abonnés gagnés et les 4 taux). Aucune valeur existante modifiée, contrôle case par case. L'original est conservé.</p>
+      <p><strong>Familles de colonnes :</strong> identification, statistiques Instagram, format (durée, parole), accroche (3 premières secondes), son (musique, voix, mots-clés), visuel (visages, bougie, lieu, montage), description (légende), contenu (sujet, format), ventes.</p>
+      <p class="note">Trois colonnes techniques (code, fichier vidéo, source des statistiques) ne figurent pas dans les tableaux livrés. Elles n'ont rien à voir avec la fiabilité.</p>
+      <p class="src">Source : reels_base_completee.xlsx (2. Base de donnée / BDD nettoyée).</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:20px"><span class="label">Nettoyage de la base des réels</span><h3>Trois colonnes retirées</h3>
+    <p>Après le contrôle à la main et la seconde analyse avec d'autres outils, trois critères se sont révélés incohérents et pas sûrs. Ils ont été supprimés de la base :</p>
+    <div class="chips"><span class="chip">Format « confession »</span><span class="chip">Mots-indices de la confession (justification du oui / non)</span><span class="chip">Luminosité</span></div></div>
+  <div class="card" style="margin-top:20px"><span class="label">Indicateurs récupérés par réel</span><h3>Depuis Meta Business Suite</h3>
+    <div class="chips"><span class="chip">Vues</span><span class="chip">Mentions J'aime</span><span class="chip">Couverture</span><span class="chip">Partages</span><span class="chip">Abonnés en plus</span><span class="chip">Commentaires</span><span class="chip">Enregistrements</span></div></div>
+</div></section><section id="instagram"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Ce que contient la base des réels</span>
+    <h2>Quelques réels font l'essentiel de l'audience</h2>
+    <p class="lead" id="ig-lead"></p>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Vues médianes d'un réel, par mois</h3><p class="note">La médiane évite qu'un seul réel viral fausse le mois.</p><div class="chart" id="ch-views"></div><p class="src">Source : reels_base_completee.xlsx, 487 réels.</p></div>
+    <div class="card"><h3>Abonnés gagnés, par mois</h3><p class="note">Les pics suivent les réels viraux (janvier, juillet et septembre 2025).</p><div class="chart" id="ch-abo"></div><p class="src">Source : reels_base_completee.xlsx, colonne « Abonnés gagnés ».</p></div>
+  </div>
+  <div class="card" style="margin-top:20px">
+    <h3>Les 8 réels les plus vus</h3>
+    <div class="tbl"><table id="tb-top"><thead><tr><th>Date</th><th>Ce qu'elle raconte</th><th style="text-align:right">Vues</th><th style="text-align:right">Abonnés gagnés</th></tr></thead><tbody></tbody></table></div>
+    <p class="note">Un réel est dit « viral » ici s'il fait au moins 2 fois la médiane des vues des 31 réels publiés autour de lui. Cette référence glissante tient compte de la croissance du compte.</p>
+  </div>
+</div></section><section id="ventes"><div class="wrap">
+  <div class="sec-head">
+    <span class="label">Ce que contient la base des ventes</span>
+    <h2>Les ventes suivent les collections et les fêtes</h2>
+    <p class="lead" id="sales-lead"></p>
+  </div>
+  <div class="card"><h3>Chiffre d'affaires net TTC par mois</h3><div class="legend"><span><i style="background:var(--accent)"></i>Mois complet</span><span><i style="background:var(--accent-2)"></i>Mois avec fermeture présumée ou incomplet</span></div><div class="chart" id="ch-ca"></div><p class="note">Pics en septembre et novembre 2025, puis septembre 2026 : sorties de collections d'automne et fêtes. Août est creux les deux années.</p><p class="src">Source : ventes_lumineva_propre.csv, 1 577 commandes web.</p></div>
+  <div class="grid2" style="margin-top:20px">
+    <div class="card"><h3>Le dimanche est le jour qui vend le plus</h3><div class="chart" id="ch-wd"></div><p class="src">Chiffre d'affaires net TTC par jour de la semaine, heure de Paris.</p></div>
+    <div class="card"><h3>Les commandes arrivent surtout entre 10 h et 14 h</h3><div class="chart" id="ch-hr"></div><p class="src">Nombre de commandes par heure de la journée, heure de Paris.</p></div>
+  </div>
+  <div class="grid2" style="margin-top:20px">
+    <div class="card"><h3>Les bougies gourmandes font près de la moitié des ventes</h3><div class="chart" id="ch-fam"></div><p class="src">Chiffre d'affaires des lignes produit par famille.</p></div>
+    <div class="card"><h3>Les 10 produits qui rapportent le plus</h3><div class="tbl"><table id="tb-prod"><thead><tr><th>Produit</th><th style="text-align:right">Qté</th><th style="text-align:right">CA TTC</th></tr></thead><tbody></tbody></table></div></div>
+  </div>
+</div></section>
+</main>
+<div class="pager"><div class="wrap"><a class="prev" href="etapes.html"><span class="label">Page précédente</span><b>Étapes</b></a><a class="next" href="methodologie.html"><span class="label">Page suivante</span><b>Méthodologie</b></a></div></div>
+<footer><div class="wrap">
+  <p><strong>Lumineva · Les réels qui font performer Lumineva.</strong> Projet du module Smart Data Marketing, M2 IAE, réalisé par Jodie Trouillet, Jade Bousquet et Hippolyte Tardy.</p>
+  <p>Sources : Brief, Méthodologie, Test réalisé, reels_base_completee.xlsx et ventes_lumineva_propre.csv (Drive « Projet_Lumineva »). Mise à jour : 18 novembre 2026.</p>
+</div></footer>
+<script src="js/graphiques.js"></script>
+</body>
+</html>
