@@ -286,3 +286,21 @@ details.test[open] .test-tog{background:var(--accent);color:var(--bg)}
 .tcard.star .tgoal{background:var(--accent);color:var(--bg)}
 .tsynth{padding:14px 16px;border-left:4px solid var(--accent-2);background:var(--surface-2);border-radius:0 6px 6px 0;color:var(--ink);margin:0}
 .tfig-n{font-size:1.6rem}
+
+/* Bases de données téléchargeables */
+.dl{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:6px;border:1.5px solid var(--accent);color:var(--accent);background:var(--surface);text-decoration:none;font-family:var(--f-label);font-weight:700;font-size:.86rem;word-break:break-all}
+.dl:hover{background:var(--accent);color:var(--bg)}
+.dl-i{font-weight:800}
+.dl-t{display:block;margin-top:6px;font-size:.8rem;color:var(--ink-2)}
+.dl-table td:first-child{min-width:230px}
+.dl-use a{white-space:nowrap}
+.dl-row{display:flex;flex-wrap:wrap;gap:8px}
+.rappel .dl-row{flex-basis:100%}
+
+/* Limites */
+.limites{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px}
+.limite{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;padding:18px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.limite .oct{width:40px;height:40px;display:grid;place-items:center;background:var(--accent-2);color:var(--bg);font-weight:800}
+.limite h3{font-size:1.05rem;margin-bottom:6px}
+.limite p{color:var(--ink-2)}
+.limite strong{color:var(--ink)}
